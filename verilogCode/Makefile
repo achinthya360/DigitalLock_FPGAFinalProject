@@ -8,6 +8,7 @@ FOOTPRINT = ct256
 FILES = top.v
 FILES += Button_Code.v
 FILES += blinker.v
+FILES += lengthCheck.v
 
 .PHONY: all clean burn
 

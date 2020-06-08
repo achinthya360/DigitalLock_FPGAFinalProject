@@ -1,10 +1,11 @@
 // Blink an LED provided blink durations and quantity of blinks
 /* module */
-module blinker (
+module lengthChecker (
     hwclk,
-    led, // must be specified by controller
 
-    testled, // just for debugging
+    // track button input
+    bstate, 
+    button, 
 
     blinkType,
 
