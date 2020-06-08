@@ -55,7 +55,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .blinkType(blinkType),
         .start_blinking(start_blinking),
         .done_blinking(done_blinking),
-        .testled(testLED),
+        .testled(led4),
     );
 
     /* Counter register */
@@ -72,12 +72,15 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     assign led2 = testLED;
     assign led3 = test2LED;    
 
-    /*always @ (negedge bstate) begin
+    always @ (negedge bstate) begin
         testLED = ~testLED;
+        if(start_blinking) begin
+            start_blinking <= 0;
+        end
         if(done_blinking == 1) begin
             test2LED = ~test2LED;
             start_blinking <= 1;
         end
-    end*/
+    end
 
 endmodule
