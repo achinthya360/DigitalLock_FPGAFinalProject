@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 7:57:52 PM on 6/7/20
+## File last modified by Fizzim: 3:28:06 PM on 6/8/20
 <version>
    14.02.26
 </version>
@@ -344,12 +344,12 @@
       </button[3:0]>
    </inputs>
    <outputs>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -399,13 +399,13 @@
          <page>
          -1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -514,12 +514,12 @@
          -1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -569,13 +569,13 @@
          <page>
          -1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -858,12 +858,12 @@ fzm_globalTable
          1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         0
+         3'b0
             <status>
             LOCAL
             </status>
@@ -913,13 +913,13 @@ fzm_globalTable
          <page>
          1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -1053,12 +1053,12 @@ fzm_globalTable
          1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         length+1
+         length[2:0]
             <status>
             LOCAL
             </status>
@@ -1100,21 +1100,21 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -1
+         0
          </x2Obj>
          <y2Obj>
-         19
+         0
          </y2Obj>
          <page>
          1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -1248,12 +1248,12 @@ fzm_globalTable
          1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         length+1
+         length[2:0]
             <status>
             LOCAL
             </status>
@@ -1295,21 +1295,21 @@ fzm_globalTable
             </status>
          </resetval>
          <x2Obj>
-         -2
+         0
          </x2Obj>
          <y2Obj>
-         9
+         0
          </y2Obj>
          <page>
          1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         0
             <status>
             GLOBAL_VAR
             </status>
@@ -1817,14 +1817,14 @@ fzm_globalTable
          1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         3'b0
             <status>
-            GLOBAL_VAR
+            LOCAL
             </status>
          </value>
          <vis>
@@ -1872,7 +1872,7 @@ fzm_globalTable
          <page>
          1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
@@ -2012,14 +2012,14 @@ fzm_globalTable
          1
          </page>
       </name>
-      <length>
+      <length[2:0]>
             <status>
             GLOBAL_FIXED
             </status>
          <value>
-         
+         3'b0
             <status>
-            GLOBAL_VAR
+            LOCAL
             </status>
          </value>
          <vis>
@@ -2067,7 +2067,7 @@ fzm_globalTable
          <page>
          1
          </page>
-      </length>
+      </length[2:0]>
       <valid>
             <status>
             GLOBAL_FIXED
@@ -3031,13 +3031,13 @@ fzm_globalTable
    251.0
    </endPtY>
    <startCtrlPtX>
-   594.0
+   593.0
    </startCtrlPtX>
    <startCtrlPtY>
    349.0
    </startCtrlPtY>
    <endCtrlPtY>
-   476.0
+   477.0
    </endCtrlPtY>
    <endCtrlPtY>
    315.0

@@ -10,6 +10,11 @@ module blinker (
 
     start_blinking,
     done_blinking,
+
+    output led5,
+    output led6,
+    output led7,
+    output led8,
     );
 
     /* I/O */
@@ -49,37 +54,23 @@ module blinker (
     parameter BLINKCOUNT2 = 4'd10;  // 5 BLINKS
     
     /* specify blinkLengths in units: tenths of seconds */
-    wire [31:0] BLINK_PERIODON;// = PERIODON1;
-    wire [31:0] BLINK_PERIODOFF;// = PERIODOFF1;
-    wire [3:0] timesToBlink;// = BLINKCOUNT1;
+    reg [31:0] BLINK_PERIODON;// = PERIODON1;
+    reg [31:0] BLINK_PERIODOFF;// = PERIODOFF1;
+    reg [3:0] timesToBlink;// = BLINKCOUNT1;
 
-    always @(posedge start_blinking) begin
-    // controller tells module to start blinking
-    numBlinks <= 4'b0000;
-    done <= 0;
-    clk_led <= 1;
-    case (blinkType)
-        1'b0 : begin
-            BLINK_PERIODON <= PERIODON1;
-            BLINK_PERIODOFF <= PERIODOFF1;
-            timesToBlink <= BLINKCOUNT1;
-        end
-        1'b1 : begin
-            BLINK_PERIODON <= PERIODON2;
-            BLINK_PERIODOFF <= PERIODOFF2;
-            timesToBlink <= BLINKCOUNT2;
-        end
-    endcase
-    end
+    initial BLINK_PERIODON = PERIODON1;
+    initial BLINK_PERIODOFF = PERIODOFF1;
+    initial timesToBlink = BLINKCOUNT1;    
 
-    always @ (posedge hwclk) begin
-        /*if(start_blinkinglocal) begin  // controller tells module to start blinking
-            numBlinks <= 0;
-            start_blinkinglocal <= 0;
-            done <= 0;
-        end*/
-        if(numBlinks < timesToBlink) begin
-            if(clk_led) begin  // led ON 
+    // for testing only
+    assign led5 = numBlinks[0];
+    assign led6 = numBlinks[1];
+    assign led7 = numBlinks[2];
+    assign led8 = numBlinks[3];
+
+    always @ (posedge hwclk) begin 
+        if(start_blinking && (numBlinks < timesToBlink)) begin
+            /*if(clk_led) begin  // led ON 
                 if (blink_timer < BLINK_PERIODON) begin
                     blink_timer <= blink_timer + 1; 
                 end 
@@ -98,12 +89,40 @@ module blinker (
                     numBlinks <= numBlinks + 1;
                     clk_led <= 1;
                 end
-            end
+            end*/
+                if (blink_timer < BLINK_PERIODON) begin
+                    blink_timer <= blink_timer + 1; 
+                    clk_led <= blink_timer[23];
+                end 
+                else begin
+                    blink_timer <= 32'b0;
+                    numBlinks <= numBlinks + 1;
+                    clk_led <= ~clk_led;
+                end
         end 
         else begin    // module is done blinking
             clk_led <= 0; // change back to 0
             done <= 1;
         end
+    end
+
+    always @ (posedge start_blinking) begin
+    // controller tells module to start blinking
+    numBlinks <= 4'b0000;
+    done <= 0;
+    clk_led <= 1;
+    case (blinkType)
+        1'b0 : begin
+            BLINK_PERIODON <= PERIODON1;
+            BLINK_PERIODOFF <= PERIODOFF1;
+            timesToBlink <= BLINKCOUNT1;
+        end
+        1'b1 : begin
+            BLINK_PERIODON <= PERIODON2;
+            BLINK_PERIODOFF <= PERIODOFF2;
+            timesToBlink <= BLINKCOUNT2;
+        end
+    endcase
     end
 
 endmodule
