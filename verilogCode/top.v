@@ -8,6 +8,8 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     keypad_c1,
     keypad_c2,
     keypad_c3,
+
+    ftdi_tx,
     );
 
     /* I/O */
@@ -29,9 +31,42 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     input keypad_c2;
     input keypad_c3;
 
+    output ftdi_tx;
 
     wire [3:0] button;
     wire bstate;
+
+    /* 9600 Hz clock generation (from 12 MHz) */
+    reg clk_9600 = 0;
+    reg [31:0] cntr_9600 = 32'b0;
+    parameter period_9600 = 625;
+
+    /* 1 Hz clock generation (from 12 MHz) */
+    reg clk_1 = 0;
+    reg [31:0] cntr_1 = 32'b0;
+    parameter period_1 = 6000000;
+
+    /* UART registers */
+    reg [7:0] uart_txbyte;
+    reg uart_send = 1'b1;
+    wire uart_txed;
+
+    assign uart_txbyte[7:2] = 5'b00000;
+    assign uart_txbyte[1:1] = doneblinking;
+    assign uart_txbyte[0:0] = startblinking;
+
+    uart_tx_8n1 transmitter (
+        // 9600 baud rate clock
+        .clk (clk_9600),
+        // byte to be transmitted
+        .txbyte (uart_txbyte),
+        // trigger a UART transmit on baud clock
+        .senddata (uart_send),
+        // input: tx is finished
+        .txdone (uart_txed),
+        // output UART tx pin
+        .tx (ftdi_tx),
+    );
 
     enterDigit button_press(
         .hwclk(hwclk), 
@@ -46,15 +81,15 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     );
 
     wire blinkType = 0;
-    wire start_blinking = 0;
-    wire done_blinking;
+    wire startblinking;
+    wire doneblinking;
 
     blinker halfBlinks(
         .hwclk(hwclk),
         .led(led1),
         .blinkType(blinkType),
-        .start_blinking(start_blinking),
-        .done_blinking(done_blinking),
+        .start_blinking(startblinking),
+        .done_blinking(doneblinking),
         .testled(led4),
     );
 
@@ -73,13 +108,30 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     assign led3 = test2LED;    
 
     always @ (negedge bstate) begin
-        testLED = ~testLED;
-        if(start_blinking) begin
-            start_blinking <= 0;
+        testLED <= ~testLED;
+        if(startblinking) begin
+            startblinking <= 0;
         end
-        if(done_blinking == 1) begin
-            test2LED = ~test2LED;
-            start_blinking <= 1;
+        if(doneblinking) begin
+            test2LED <= ~test2LED;
+            startblinking <= 1;
+        end
+    end
+
+    /* Low speed clock generation */
+    always @ (posedge hwclk) begin
+        /* generate 9600 Hz clock */
+        cntr_9600 <= cntr_9600 + 1;
+        if (cntr_9600 == period_9600) begin
+            clk_9600 <= ~clk_9600;
+            cntr_9600 <= 32'b0;
+        end
+
+        /* generate 1 Hz clock */
+        cntr_1 <= cntr_1 + 1;
+        if (cntr_1 == period_1) begin
+            clk_1 <= ~clk_1;
+            cntr_1 <= 32'b0;
         end
     end
 

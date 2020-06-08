@@ -2,13 +2,17 @@
 PROJ      = buttontesting
 BUILD     = ./build
 DEVICE    = 8k
+ifeq (8k,$(DEVICE))
 FOOTPRINT = ct256
+else
+FOOTPRINT = tq144
+endif
 
 # Files
 FILES = top.v
 FILES += Button_Code.v
 FILES += blinker.v
-FILES += lengthCheck.v
+FILES += uart_trx.v
 
 .PHONY: all clean burn
 
