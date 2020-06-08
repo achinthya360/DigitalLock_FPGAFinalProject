@@ -45,22 +45,17 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .bstate(bstate),
     );
 
-    parameter blinkCount = 3;
-    parameter blinkLengthOn = 5;
-    parameter blinkLengthOff = 5;
+    wire blinkType = 0;
     wire start_blinking = 0;
     wire done_blinking;
 
     blinker halfBlinks(
         .hwclk(hwclk),
         .led(led1),
-
-        .blinkCount(blinkCount),
-        .blinkLengthOn(blinkLengthOn),
-        .blinkLengthOff(blinkLengthOff),
-
+        .blinkType(blinkType),
         .start_blinking(start_blinking),
         .done_blinking(done_blinking),
+        .testled(testLED),
     );
 
     /* Counter register */
@@ -72,17 +67,17 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     assign led7 = button[2];
     assign led8 = button[3];
 
-    wire testLED = 0; 
-    wire test2LED = 0;
+    wire testLED; 
+    wire test2LED;
     assign led2 = testLED;
     assign led3 = test2LED;    
 
-    always @ (negedge bstate) begin
+    /*always @ (negedge bstate) begin
         testLED = ~testLED;
         if(done_blinking == 1) begin
             test2LED = ~test2LED;
             start_blinking <= 1;
         end
-    end
+    end*/
 
 endmodule
