@@ -4,24 +4,24 @@ module blinker (
     hwclk,
     led, // must be specified by controller
 
-    testled, // just for debugging
+    //testled, // just for debugging
 
     blinkType,
 
     start_blinking,
     done_blinking,
 
-    output led5,
+    /*output led5,
     output led6,
     output led7,
-    output led8,
+    output led8,*/
     );
 
     /* I/O */
     input hwclk;
     output led;
 
-    output testled;
+    //output testled;
     
     input blinkType;
 
@@ -64,10 +64,12 @@ module blinker (
     */   
 
     // for testing only
+    /*
     assign led5 = numBlinks[0];
     assign led6 = numBlinks[1];
     assign led7 = numBlinks[2];
     assign led8 = numBlinks[3];
+    */
 
     always @ (posedge hwclk) begin 
         if(start_blinking & !prev_blinking) begin
@@ -105,7 +107,7 @@ module blinker (
         end
     end
 
-    always @ (posedge start_blinkinglocal) begin
+    always @ (posedge start_blinking) begin
     // controller tells module to start blinking
        case (blinkType)
         1'b0 : begin

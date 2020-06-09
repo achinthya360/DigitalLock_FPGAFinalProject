@@ -92,11 +92,6 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .blinkType(blinkType),
         .start_blinking(startblinking),
         .done_blinking(doneblinking),
-        .testled(led4),
-        .led5(led5),
-        .led6(led6),
-        .led7(led7),
-        .led8(led8),
     );
 
     /* Counter register */
