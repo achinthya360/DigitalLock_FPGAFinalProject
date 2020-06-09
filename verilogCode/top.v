@@ -82,7 +82,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .bstate(bstate),
     );
 
-    wire blinkType = 0;
+    wire blinkType = 1;
     wire startblinking;
     wire doneblinking;
 
