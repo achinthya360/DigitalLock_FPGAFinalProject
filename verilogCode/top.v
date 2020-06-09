@@ -87,27 +87,50 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     wire startblinking;
     wire doneblinking;
 
+    /*
     blinker halfBlinks(
         .hwclk(hwclk),
         .led(led1),
         .blinkType(blinkType),
         .start_blinking(startblinking),
         .done_blinking(doneblinking),
+    );*/
+
+    wire validUC;
+    wire validPC;
+    wire readInput = 1; // change later, assign to actual readInput from controller
+    wire inputWrong = 0; // change later, assign to correctness checker module
+
+    lengthChecker lCHECK(
+        .hwclk(hwclk),
+        .bstate(bstate),
+        .button(button),
+        .inputWrong(inputWrong),
+        .readInput(readInput),
+        .validUC(validUC),
+        .validPC(validPC),
+        /*.led1(led1),
+        .led2      (led2),
+        .led3      (led3),
+        .led4      (led4)
+        */
     );
 
     /* Counter register */
     reg [31:0] counter = 32'b0;
 
     /* LED drivers */
-    /*assign led5 = button[0];
+    /*
+    assign led5 = button[0];
     assign led6 = button[1];
     assign led7 = button[2];
-    assign led8 = button[3];*/
-
+    assign led8 = button[3];
+    */
+    
     wire testLED; 
     wire test2LED;
-    assign led2 = startblinking;
-    assign led3 = test2LED;    
+    assign led7 = testLED;
+    assign led8 = test2LED;   
 
     always @ (negedge bstate) begin
         if(readInput) begin
@@ -121,12 +144,16 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
             test2LED <= ~test2LED;
             startblinking <= 1;
         end*/
-        if(button[3:0]==4'd2) begin
+        
+        /*if(button[3:0]==4'd2) begin
             startblinking <= 1;
         end
         else begin
             startblinking <= 0;
-        end
+        end*/
+        
+        testLED <= validUC;
+        test2LED <= validPC;
     end
 
     

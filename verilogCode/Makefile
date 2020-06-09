@@ -12,7 +12,7 @@ endif
 FILES = top.v
 FILES += Button_Code.v
 FILES += blinker.v
-FILES += uart_trx.v
+FILES += lengthchecker.v
 
 .PHONY: all clean burn
 

@@ -1,12 +1,15 @@
 // Created by fizzim.pl version 5.20 on 2020:06:08 at 22:48:02 (www.fizzim.com)
 
 module lengthChecker (
+  input hwclk,
   input wire bstate,
-  input wire button[3:0],
+  input wire [3:0]button,
   input wire inputWrong,
   input wire readInput,
   output reg validUC,
   output reg validPC,
+
+  //output led1, output led2,output led3, output led4,
 );
 
   // state bits
@@ -20,25 +23,33 @@ module lengthChecker (
   reg [2:0] state;
   reg [2:0] nextstate;
 
-  reg validUCLength;
+  wire validUCLength;
   assign validUC = validUCLength;
-  reg validPCLength;
+  wire validPCLength;
   assign validPC = validPCLength;
 
-  wire prevCount[3:0];
-  wire count[3:0];
+  //wire [31:0]prevCount;
+  wire [31:0]count;
+
+  //wire testLED;
+  /*
+  assign led1 = state[0];
+  assign led2 = state[1];
+  assign led3 = state[2];
+  assign led4 = count[3];
+  */
 
   // comb always block
-  always @(button) begin
+  always @(negedge bstate) begin
     nextstate = state; // default to hold value because implied_loopback is set
     case (state)
       START         : begin
-        if (readInput&(button[3:0]==8)) begin
-          count <= 0;
+        if (readInput&&(button[3:0]==4'd8)) begin
+          count = 0;
           nextstate = READ_REPROGRAM;
         end
-        else if (readInput&(button[3:0]==9)) begin
-          count <= 0;
+        else if (readInput&&(button[3:0]==4'd9)) begin
+          count = 0;
           nextstate = READ_LOCK;
         end
         else begin
@@ -46,61 +57,64 @@ module lengthChecker (
         end
       end
       READ_LOCK     : begin
-        if (readInput&(button[3:0]==9)) begin
+        if (readInput&&(button[3:0]==4'd9)) begin
           nextstate = START;
         end
         else begin
           nextstate = READ_LOCK;
-          count <= count + 1;
+          count = count + 1;
         end
       end
       READ_REPROGRAM: begin
-        if (readInput&(button[3:0]==8)) begin
-          count <= 0;
+        if (readInput&&(button[3:0]==4'd8)) begin
+          count = 0;
           nextstate = REPROGRAM2;
         end
         else begin
-          count <= count + 1;
+          count = count + 1;
           nextstate = READ_REPROGRAM;
         end
       end
       REPROGRAM2    : begin
-        if (readInput&(button[3:0]==8)) begin
-          count <= 0;
+        if (readInput&&(button[3:0]==4'd8)) begin
+          count = 0;
           nextstate = REPROGRAM3;
         end
         else begin
-          count <= count + 1;
+          count = count + 1;
           nextstate = REPROGRAM2;
         end
       end
       REPROGRAM3    : begin
-        if (readInput&(button[3:0]==8)) begin
+        if (readInput&&(button[3:0]==4'd8)) begin
           nextstate = START;
         end
         else begin
-          count <= count + 1;
+          count = count + 1;
           nextstate = REPROGRAM3;
         end
       end
     endcase
-    prevCount <= count;
-    validUCLength <= (count > 3) & (count < 7);
-    validPCLength <= (count == 6);
+    //prevCount <= count;
+    validUCLength = (count > 32'd2) && (count < 32'd6);
+    validPCLength = (count == 32'd5);
   end
 
   // Assign reg'd outputs to state bits
 
   // sequential always block
-  always @(negedge bstate or negedge inputWrong) begin
-    if (!inputWrong | (button[3:0]==7))
+  always @(posedge hwclk/*negedge bstate or posedge inputWrong*/) begin
+    if (inputWrong)
       state <= START;
-    else
+    else if(button[3:0]==7)
+      state <= START;
+    else begin
       state <= nextstate;
+    end
   end
 
   // This code allows you to see state names in simulation
-  `ifndef SYNTHESIS
+  /*`ifndef SYNTHESIS
   reg [111:0] statename;
   always @* begin
     case (state)
@@ -118,6 +132,6 @@ module lengthChecker (
         statename = "XXXXXXXXXXXXXX";
     endcase
   end
-  `endif
+  `endif*/
 
 endmodule
