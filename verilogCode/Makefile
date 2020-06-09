@@ -13,6 +13,7 @@ FILES = top.v
 FILES += Button_Code.v
 FILES += blinker.v
 FILES += lengthchecker.v
+FILES += validityChecker.v
 
 .PHONY: all clean burn
 

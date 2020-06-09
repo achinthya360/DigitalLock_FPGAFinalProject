@@ -5,19 +5,26 @@ module validChecker (
   input wire [3:0]button,
   input wire inputWrong,
   input wire readInput,
-  input wire compareType[1:0],
-  input wire correctUC[23:0],
-  input wire correctPC[23:0],
+  input wire [1:0]compareType,
+  input wire [23:0]correctUC,
+  input wire [23:0]correctPC,
   input wire store,
   output reg correct,
-  output wire newUC[23:0],
+  output wire [23:0]newUC,
 
-  //output led1, output led2,output led3, output led4,
+
+  output led1, output led2,output led3, output led4,
 );
 
 	wire [3:0] prev1, prev2, prev3, prev4, prev5, prev6;
 	reg [3:0] prevUC1, prevUC2, prevUC3, prevUC4, prevUC5, prevUC6;
 	
+	/* just testing purposes */
+	assign led1 = prev6[0];
+	assign led2 = prev6[1];
+	assign led3 = prev6[2];
+	assign led4 = prev6[3];
+
 	always @(negedge bstate) begin
 		if(readInput) begin // only update registers when inputs should be read
 			if((button[3:0]==8)||(button[3:0]==9)||(button[3:0]==7)) begin
@@ -27,6 +34,7 @@ module validChecker (
 				prev4 = 0;
 				prev5 = 0;
 				prev6 = 0;
+				correct <= 0;
 			end 
 			else begin
 				prev1 = prev2;
@@ -35,6 +43,7 @@ module validChecker (
 				prev4 = prev5;
 				prev5 = prev6;
 				prev6 = button;
+				correct <= 0;
 			end 
 		end
 
@@ -68,13 +77,14 @@ module validChecker (
 				correct <= 1;
 			end
 		end
-		else // store a UC for future comparison
+		else begin // store a UC for future comparison
 			prevUC1 = prev1;
 			prevUC2 = prev2;
 			prevUC3 = prev3;
 			prevUC4 = prev4;
 			prevUC5 = prev5;
 			prevUC6 = prev6;
+			correct <= 1;
 		end
 	end
 
