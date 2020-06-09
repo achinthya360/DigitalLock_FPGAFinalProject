@@ -34,6 +34,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     // output ftdi_tx; // use for UART transmission
 
     wire [3:0] button;
+    wire [3:0] button_local;
     wire bstate;
 
     /* UART transmission code
@@ -109,6 +110,9 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     assign led3 = test2LED;    
 
     always @ (negedge bstate) begin
+        if(readInput) begin
+            button_local = button;
+        end
         /*testLED <= ~testLED;
         if(startblinking) begin
             startblinking <= 0;
