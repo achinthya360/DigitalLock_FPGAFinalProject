@@ -136,8 +136,9 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         */
     );
 
-    wire store = 0;
-    wire [1:0] compareType = 2'b01;
+    wire store;
+    wire [1:0] compareType;
+    initial compareType = 2'b01;
     wire correct;
     wire newUC;
 
@@ -176,12 +177,37 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     assign led7 = testLED;
     assign led8 = test2LED;  
 
-    assign led5 = correct; 
-
+    assign led5 = correct;
+    assign led6 = store;
+    
     always @ (negedge bstate) begin
         if(readInput) begin
             button_local = button;
+
+            if(button_local[3:0] == 8) begin
+                if(compareType == 2'b01) begin 
+                    compareType <= 2'b11;
+                end
+                else if(compareType == 2'b11) begin
+                    compareType <= 2'b10;
+                end
+                else if(compareType == 2'b10) begin
+                    compareType <= 2'b01;
+                end
+            end
+            else if (button_local[3:0] == 9) begin
+                compareType <= 2'b01;
+            end
+
+        if(compareType <= 2'b10 && correct) begin
+            store = 1;
+            correctUC = newUC;
         end
+        else begin
+            store <= 0;
+        end
+        end
+
         /*testLED <= ~testLED;
         if(startblinking) begin
             startblinking <= 0;

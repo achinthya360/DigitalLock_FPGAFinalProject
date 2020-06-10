@@ -25,6 +25,11 @@ module validChecker (
 	assign led3 = prev6[2];
 	assign led4 = prev6[3];
 
+	parameter COMPAREPC = 2'b00;
+	parameter COMPAREUC = 2'b01;
+	parameter MATCHUC = 2'b10;
+	parameter STOREUC = 2'b11;
+
 	always @(negedge bstate) begin
 		if(readInput) begin // only update registers when inputs should be read
 			if((button[3:0]==8)||(button[3:0]==9)||(button[3:0]==7)) begin
@@ -47,7 +52,7 @@ module validChecker (
 			end 
 		end
 
-		if(compareType==2'b00) begin // compare PCs
+		if(compareType==COMPAREPC) begin // compare PCs
 			if(prev1[3:0]==correctPC[23:20]
 				&& prev2[3:0]==correctPC[19:16]
 				&& prev3[3:0]==correctPC[15:12]
@@ -57,7 +62,7 @@ module validChecker (
 				correct <= 1;
 			end
 		end
-		else if(compareType==2'b01) begin // compare UC to correct UC
+		else if(compareType==COMPAREUC) begin // compare UC to correct UC
 			if((prev1[3:0]==correctUC[23:20] | correctUC[23:20]==0)
 				&& (prev2[3:0]==correctUC[19:16] | correctUC[19:16]==0)
 				&& prev3[3:0]==correctUC[15:12]
@@ -67,7 +72,7 @@ module validChecker (
 				correct <= 1;
 			end
 		end
-		else if(compareType==2'b10) begin// compare UC to previously entered input UC
+		else if(compareType==MATCHUC) begin// compare UC to previously entered input UC
 			if((prev1[3:0]==prevUC1[3:0] | prevUC1[23:20]==0)
 				&& (prev2[3:0]==prevUC2[3:0] | prevUC1[19:16]==0)
 				&& prev3[3:0]==prevUC3[3:0]
@@ -84,11 +89,11 @@ module validChecker (
 			prevUC4 = prev4;
 			prevUC5 = prev5;
 			prevUC6 = prev6;
-			correct <= 1;
+			correct <= 0;
 		end
 	end
 
-	always @(posedge store) begin
+	always @(negedge store) begin
 		newUC[23:20] = prev1;
 		newUC[19:16] = prev2;
 		newUC[15:12] = prev3;
