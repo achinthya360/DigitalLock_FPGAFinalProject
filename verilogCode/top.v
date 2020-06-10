@@ -82,7 +82,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     wire validUClength;
     wire validPClength;
     wire readInput; // = 1; // change later, assign to actual readInput from controller
-    //initial readInput = 1;
+    initial readInput = 1;
     wire inputWrong; // = 0; // change later, assign to correctness checker module
     initial inputWrong = 0;
 
@@ -98,7 +98,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
 
     wire store;
     wire [1:0] compareType;
-    //initial compareType = 2'b01;
+    initial compareType = 2'b01;
     wire correct;
     wire newUC;
     wire data_ready;
@@ -117,22 +117,24 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .newUC(newUC),
         .dataready(data_ready),
         
-        /*
+        
         .led1(led1),
         .led2(led2),
         .led3(led3),
-        .led4(led4),   */
+        .led4(led4),   
     );
 
     wire check1;
     wire check2;
     wire blinkTypecontrol;
+    wire led_1;
 
+    /*
     controller controlFSM(
         .blinkType(blinkTypecontrol),
         .check1(check1),        // are these check1 and 2 vestiges of logic before compareType was introduced???
         .check2(check2),
-        .led1(led1),
+        .led1(led_1),
         .led2(led2),
         .led3(led3),
         .read_input(readInput),
@@ -150,27 +152,32 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .validLengthPC(validPClength),
         .testLED       (testLED),
         .testLED2      (testLED2)
-    );
+    ); */
     
+    /*
     assign led8 = readInput;
     assign led7 = correct;
     reg testLED;
     assign led4 = testLED;
     assign led5 = testLED2;
 
+    assign led1 = led_1;
+
     always @(posedge hwclk) begin
         blinkType <= blinkTypecontrol;
-    end
+    end */
 
-    /*
+    
     wire testLED; 
+    assign testLED = validUClength;
     wire test2LED;
+    assign test2LED = validPClength;
     assign led7 = testLED;
     assign led8 = test2LED;  
 
     assign led5 = correct;
     assign led6 = store;
-    
+    /*
     always @ (negedge bstate) begin
         if(readInput) begin
             button_local = button;
@@ -199,9 +206,9 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         end
         end
         
-        testLED <= validUC;
-        test2LED <= validPC;
-    end
-    */
+        testLED <= validUClength;
+        test2LED <= validPClength;
+    end */
+    
 
 endmodule

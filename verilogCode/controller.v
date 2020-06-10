@@ -38,7 +38,7 @@ module controller (
   //reg led3;
   //reg read_input;
   //reg start_blinking;
-  initial led1 = 0;
+  initial led1 = 1;
   initial store = 0;
   initial read_input = 1;
   initial testLED = 0;
@@ -70,8 +70,8 @@ module controller (
     case (state)
       IDLE            : begin
         testLED = 1;
-        testled2 = 0;
-        led1 = led1;
+        testLED2 = 0;
+        //led1 = led1;
         led2 = 0;
         led3 = 0;
         read_input = 1;							//is this correct?
@@ -105,7 +105,7 @@ module controller (
         end
       end
       checkPC         : begin
-        led1 = led1;
+        //led1 = led1;
         led2 = 0;
         led3 = 1;
         read_input = 0;
@@ -154,7 +154,7 @@ module controller (
         end
       end
       matchUCs        : begin
-        led1 = led1;
+        //led1 = led1;
         led2 = 0;
         led3 = 1;
         read_input = 0;
@@ -186,7 +186,7 @@ module controller (
         end
       end
       readUC          : begin
-        led1 = led1;
+        //led1 = led1;
         led2 = 0;
         led3 = 1;
         read_input = 1;
@@ -202,7 +202,7 @@ module controller (
         end
       end
       readUC2         : begin
-        led1 = led1;
+        //led1 = led1;
         led2 = 0;
         led3 = 1;
         read_input = 1;
@@ -218,7 +218,7 @@ module controller (
         end
       end
       reprogramSuccess: begin
-        led1 = led1;
+        //led1 = led1;
         led2 = 0;
         led3 = ledblink;
         read_input = 0;
@@ -239,7 +239,7 @@ module controller (
         end
       end
       toggle_lock     : begin
-        led1 = !led1;
+        led1 = 1;//!led1;
         led2 = 0;
         led3 = 0;
         read_input = 0;
@@ -280,7 +280,7 @@ module controller (
   //assign store = state[8];
 
   // sequential always block
-  always @(negedge bstate) begin
+  always @(posedge hwclk) begin
       state <= nextstate;
   end
 

@@ -43,7 +43,7 @@ module validChecker (
 				correct <= 0;
 				dataready <= 0;
 			end 
-			else if((button[3:0]==8)||(button[3:0]==9)) begin // ignore 8 or 9
+			else if(((button[3:0]==8)||(button[3:0]==9)) && correct == 1) begin // ignore 8 or 9
 				prevNum = button;
 			end
 			else begin
