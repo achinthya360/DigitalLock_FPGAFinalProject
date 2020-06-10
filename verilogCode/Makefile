@@ -1,5 +1,5 @@
 # Project setup
-PROJ      = buttontesting
+PROJ      = digitallock
 BUILD     = ./build
 DEVICE    = 8k
 ifeq (8k,$(DEVICE))
@@ -14,6 +14,7 @@ FILES += Button_Code.v
 FILES += blinker.v
 FILES += lengthchecker.v
 FILES += validityChecker.v
+FILES += controller.v
 
 .PHONY: all clean burn
 

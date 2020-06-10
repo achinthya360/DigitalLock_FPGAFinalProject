@@ -6,10 +6,10 @@ module blinker (
 
     //testled, // just for debugging
 
-    blinkType,
+    input wire blinkType,
 
-    start_blinking,
-    done_blinking,
+    input start_blinking,
+    output done_blinking,
 
     /*output led5,
     output led6,
@@ -18,15 +18,13 @@ module blinker (
     );
 
     /* I/O */
-    input hwclk;
-    output led;
+    input wire hwclk;
+    output wire led;
 
     //output testled;
-    
-    input blinkType;
 
-    input start_blinking;
-    output done_blinking;
+    wire start_blinking;
+    wire done_blinking;
 
     wire prev_blinking;
 

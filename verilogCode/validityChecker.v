@@ -11,7 +11,7 @@ module validChecker (
   input wire store,
   output reg correct,
   output wire [23:0]newUC,
-
+  output wire dataready,
 
   output led1, output led2,output led3, output led4,
 );
@@ -40,6 +40,7 @@ module validChecker (
 				prev5 = 0;
 				prev6 = 0;
 				correct <= 0;
+				dataready <= 0;
 			end 
 			else begin
 				prev1 = prev2;
@@ -49,6 +50,7 @@ module validChecker (
 				prev5 = prev6;
 				prev6 = button;
 				correct <= 0;
+				dataready <= 0;
 			end 
 		end
 

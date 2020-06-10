@@ -8,8 +8,6 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     keypad_c1,
     keypad_c2,
     keypad_c3,
-
-    // ftdi_tx, // use for UART transmission
     );
 
     /* I/O */
@@ -30,8 +28,6 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     input keypad_c1;
     input keypad_c2;
     input keypad_c3;
-
-    // output ftdi_tx; // use for UART transmission
 
     wire [3:0] button;
     wire [3:0] button_local;
@@ -57,40 +53,6 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     parameter [3:0]correctPC5 = 6;
     parameter [3:0]correctPC6= 6;
 
-    /* UART transmission code
-    // 9600 Hz clock generation (from 12 MHz) 
-    reg clk_9600 = 0;
-    reg [31:0] cntr_9600 = 32'b0;
-    parameter period_9600 = 625;
-
-    // 1 Hz clock generation (from 12 MHz) 
-    reg clk_1 = 0;
-    reg [31:0] cntr_1 = 32'b0;
-    parameter period_1 = 6000000;
-
-    //UART registers
-    reg [7:0] uart_txbyte;
-    reg uart_send = 1'b1;
-    wire uart_txed;
-
-    assign uart_txbyte[7:2] = 5'b00000;
-    assign uart_txbyte[1:1] = doneblinking;
-    assign uart_txbyte[0:0] = startblinking;
-
-    uart_tx_8n1 transmitter (
-        // 9600 baud rate clock
-        .clk (clk_9600),
-        // byte to be transmitted
-        .txbyte (uart_txbyte),
-        // trigger a UART transmit on baud clock
-        .senddata (uart_send),
-        // input: tx is finished
-        .txdone (uart_txed),
-        // output UART tx pin
-        .tx (ftdi_tx),
-    );
-    */
-
     enterDigit button_press(
         .hwclk(hwclk), 
         .keypad_r1(keypad_r1),
@@ -103,23 +65,26 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .bstate(bstate),
     );
 
-    wire blinkType = 1;
+    wire blinkType;
+    //initial blinkType = 0;
     wire startblinking;
     wire doneblinking;
+    wire ledblink;
 
-    /*
-    blinker halfBlinks(
+    blinker blinks(
         .hwclk(hwclk),
-        .led(led1),
+        .led(ledblink),
         .blinkType(blinkType),
         .start_blinking(startblinking),
         .done_blinking(doneblinking),
-    );*/
+    );
 
-    wire validUC;
-    wire validPC;
-    wire readInput = 1; // change later, assign to actual readInput from controller
-    wire inputWrong = 0; // change later, assign to correctness checker module
+    wire validUClength;
+    wire validPClength;
+    wire readInput; // = 1; // change later, assign to actual readInput from controller
+    //initial readInput = 1;
+    wire inputWrong; // = 0; // change later, assign to correctness checker module
+    initial inputWrong = 0;
 
     lengthChecker lCHECK(
         .hwclk(hwclk),
@@ -127,20 +92,16 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .button(button),
         .inputWrong(inputWrong),
         .readInput(readInput),
-        .validUC(validUC),
-        .validPC(validPC),
-        /*.led1(led1),
-        .led2      (led2),
-        .led3      (led3),
-        .led4      (led4)
-        */
+        .validUC(validUClength),
+        .validPC(validPClength),
     );
 
     wire store;
     wire [1:0] compareType;
-    initial compareType = 2'b01;
+    //initial compareType = 2'b01;
     wire correct;
     wire newUC;
+    wire data_ready;
 
     validChecker vCHECK(
         .hwclk(hwclk),
@@ -154,24 +115,52 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .store(store),
         .correct(correct),
         .newUC(newUC),
+        .dataready(data_ready),
         
+        /*
         .led1(led1),
         .led2(led2),
         .led3(led3),
-        .led4(led4),
+        .led4(led4),   */
     );
 
-    /* Counter register */
-    reg [31:0] counter = 32'b0;
+    wire check1;
+    wire check2;
+    wire blinkTypecontrol;
 
-    /* LED drivers */
-    /*
-    assign led5 = button[0];
-    assign led6 = button[1];
-    assign led7 = button[2];
-    assign led8 = button[3];
-    */
+    controller controlFSM(
+        .blinkType(blinkTypecontrol),
+        .check1(check1),        // are these check1 and 2 vestiges of logic before compareType was introduced???
+        .check2(check2),
+        .led1(led1),
+        .led2(led2),
+        .led3(led3),
+        .read_input(readInput),
+        .start_blinking(startblinking),
+        .store(store),
+        .compareType(compareType),
+        .button(button_local),
+        .hwclk(hwclk),
+        .bstate(bstate),
+        .correct_input(correct),
+        .data_ready(data_ready),
+        .done_blinking(doneblinking),
+        .ledblink(ledblink),
+        .validLength(validUClength),
+        .validLengthPC(validPClength),
+        .testLED       (testLED),
+    );
     
+    assign led8 = readInput;
+    assign led7 = correct;
+    reg testLED;
+    assign led4 = testLED;
+
+    always @(posedge hwclk) begin
+        blinkType <= blinkTypecontrol;
+    end
+
+    /*
     wire testLED; 
     wire test2LED;
     assign led7 = testLED;
@@ -207,44 +196,10 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
             store <= 0;
         end
         end
-
-        /*testLED <= ~testLED;
-        if(startblinking) begin
-            startblinking <= 0;
-        end
-        if(doneblinking) begin
-            test2LED <= ~test2LED;
-            startblinking <= 1;
-        end*/
-        
-        /*if(button[3:0]==4'd2) begin
-            startblinking <= 1;
-        end
-        else begin
-            startblinking <= 0;
-        end*/
         
         testLED <= validUC;
         test2LED <= validPC;
     end
-
-    
-    /* Low speed clock generation */
-    /*always @ (posedge hwclk) begin
-        /* generate 9600 Hz clock */
-     /*   cntr_9600 <= cntr_9600 + 1;
-        if (cntr_9600 == period_9600) begin
-            clk_9600 <= ~clk_9600;
-            cntr_9600 <= 32'b0;
-        end
     */
-        /* generate 1 Hz clock */
-     /*   cntr_1 <= cntr_1 + 1;
-        if (cntr_1 == period_1) begin
-            clk_1 <= ~clk_1;
-            cntr_1 <= 32'b0;
-        end
-    end*/
-    
 
 endmodule
