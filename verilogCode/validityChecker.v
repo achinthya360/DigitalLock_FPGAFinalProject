@@ -16,7 +16,7 @@ module validChecker (
   output led1, output led2,output led3, output led4,
 );
 
-	wire [3:0] prev1, prev2, prev3, prev4, prev5, prev6;
+	wire [3:0] prev1, prev2, prev3, prev4, prev5, prev6, prevNum;
 	reg [3:0] prevUC1, prevUC2, prevUC3, prevUC4, prevUC5, prevUC6;
 	
 	/* just testing purposes */
@@ -32,16 +32,20 @@ module validChecker (
 
 	always @(negedge bstate) begin
 		if(readInput) begin // only update registers when inputs should be read
-			if((button[3:0]==8)||(button[3:0]==9)||(button[3:0]==7)) begin
+			if((prevNum==8||prevNum==9)||(button[3:0]==7)) begin
 				prev1 = 0;
 				prev2 = 0;
 				prev3 = 0;
 				prev4 = 0;
 				prev5 = 0;
 				prev6 = 0;
+				prevNum = 0;
 				correct <= 0;
 				dataready <= 0;
 			end 
+			else if((button[3:0]==8)||(button[3:0]==9)) begin // ignore 8 or 9
+				prevNum = button;
+			end
 			else begin
 				prev1 = prev2;
 				prev2 = prev3;

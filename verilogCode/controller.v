@@ -27,6 +27,7 @@ module controller (
   input wire validLengthPC,
   
   output wire testLED,
+  output wire testLED2,
 );
 
   //initial blinkType = 0;		//update with this variable at every blinking state
@@ -39,7 +40,9 @@ module controller (
   //reg start_blinking;
   initial led1 = 0;
   initial store = 0;
-  initial read_input = 0;
+  initial read_input = 1;
+  initial testLED = 0;
+  initial testLED2 = 0;
   
   // state bits
   parameter 
@@ -61,22 +64,25 @@ module controller (
   reg [10:0] nextstate;
 
   // comb always block
-  always @(posedge bstate) begin
+  always @(*) begin
     
     nextstate = state; // default to hold value because implied_loopback is set
     case (state)
       IDLE            : begin
         testLED = 1;
+        testled2 = 0;
         led1 = led1;
         led2 = 0;
         led3 = 0;
         read_input = 1;							//is this correct?
         if (button[3:0]==9) begin
           testLED=0;
+          testLED2=1;
           nextstate = locktoggleCE;
         end
         else if (button[3:0]==8) begin
           testLED =0;
+          testLED2=1;
           nextstate = readPC;
         end
         else begin
@@ -136,6 +142,7 @@ module controller (
         led2 = 1;
         led3 = 0;
         read_input = 1;
+        testLED2 = 1;
         if ((button[3:0]==9)&(validLength==1)) begin
           nextstate = input_check;
         end

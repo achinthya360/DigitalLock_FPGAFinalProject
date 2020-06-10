@@ -149,12 +149,14 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .validLength(validUClength),
         .validLengthPC(validPClength),
         .testLED       (testLED),
+        .testLED2      (testLED2)
     );
     
     assign led8 = readInput;
     assign led7 = correct;
     reg testLED;
     assign led4 = testLED;
+    assign led5 = testLED2;
 
     always @(posedge hwclk) begin
         blinkType <= blinkTypecontrol;

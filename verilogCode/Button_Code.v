@@ -24,6 +24,7 @@ module enterDigit(
 
     output [3:0] button;
     reg [3:0] buttonReg;
+    initial buttonReg = 0;
     assign button = buttonReg;
 
     output bstate;
