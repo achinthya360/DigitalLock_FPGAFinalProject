@@ -96,8 +96,8 @@ module lengthChecker (
       end
     endcase
     //prevCount <= count;
-    validUCLength = (count > 32'd2) && (count < 32'd6);
-    validPCLength = (count == 32'd5);
+    validUCLength = (count > 32'd3) && (count < 32'd7);
+    validPCLength = (count == 32'd6);
   end
 
   // Assign reg'd outputs to state bits

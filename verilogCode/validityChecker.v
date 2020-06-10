@@ -45,6 +45,7 @@ module validChecker (
 			end 
 			else if(((button[3:0]==8)||(button[3:0]==9)) && correct == 1) begin // ignore 8 or 9
 				prevNum = button;
+				dataready <= 1;
 			end
 			else begin
 				prev1 = prev2;
@@ -65,6 +66,7 @@ module validChecker (
 				&& prev4[3:0]==correctPC[11:8]
 				&& prev5[3:0]==correctPC[7:4]
 				&& prev6[3:0]==correctPC[3:0]) begin
+				dataready <= 1;
 				correct <= 1;
 			end
 		end
@@ -75,6 +77,7 @@ module validChecker (
 				&& prev4[3:0]==correctUC[11:8]
 				&& prev5[3:0]==correctUC[7:4]
 				&& prev6[3:0]==correctUC[3:0]) begin
+				dataready <= 1;
 				correct <= 1;
 			end
 		end
@@ -85,6 +88,7 @@ module validChecker (
 				&& prev4[3:0]==prevUC4[3:0]
 				&& prev5[3:0]==prevUC5[3:0]
 				&& prev6[3:0]==prevUC6[3:0]) begin
+				dataready <= 1;
 				correct <= 1;
 			end
 		end
@@ -95,6 +99,7 @@ module validChecker (
 			prevUC4 = prev4;
 			prevUC5 = prev5;
 			prevUC6 = prev6;
+			dataready <= 0;
 			correct <= 0;
 		end
 	end

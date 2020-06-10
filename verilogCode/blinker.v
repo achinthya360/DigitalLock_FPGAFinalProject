@@ -39,7 +39,7 @@ module blinker (
     // actual led number must be specified by controller
     assign led = clk_led;
     assign done_blinking = done;
-    assign testled = done;
+    //assign testled = done;
 
     // error blink
     parameter PERIODON1 = 32'd6000000;   //0.5 SECONDS

@@ -7,16 +7,16 @@
 
 module controller (
   output wire blinkType,
-  output wire check1,
-  output wire check2,
-  output wire led1,
+  //output wire check1,
+  //output wire check2,
+  output led1,
   output wire led2,
   output wire led3,
   output wire read_input,
   output wire start_blinking,
   output wire store,
   output wire [1:0] compareType,
-  input wire [3:0] button,
+  input wire [3:0]button,
   input wire hwclk,
   input wire bstate,
   input wire correct_input,
@@ -28,8 +28,11 @@ module controller (
   
   output wire testLED,
   output wire testLED2,
+  output wire testLED3,
+  output wire testLED4,
 );
 
+  wire led1;
   //initial blinkType = 0;		//update with this variable at every blinking state
   //reg check1;
   //reg check2;
@@ -38,193 +41,214 @@ module controller (
   //reg led3;
   //reg read_input;
   //reg start_blinking;
-  initial led1 = 1;
+  initial led1 = 0;
   initial store = 0;
   initial read_input = 1;
+/*
   initial testLED = 0;
   initial testLED2 = 0;
-  
+  initial testLED3 = 0;
+  initial testLED4 = 0;
+*/
+
+  parameter COMPAREPC = 2'b00;
+  parameter COMPAREUC = 2'b01;
+  parameter MATCHUC = 2'b10;
+  parameter STOREUC = 2'b11;
+
   // state bits
   parameter 
-  IDLE             = 11'b00000000000, // extra=00 store=0 start_blinking=0 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  LED3longblink    = 11'b00010000000, // extra=00 store=0 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  checkPC          = 11'b00000100000, // extra=00 store=0 start_blinking=0 read_input=0 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  input_check      = 11'b00000010000, // extra=00 store=0 start_blinking=0 read_input=0 led3=0 led2=1 led1=0 check2=0 check1=0 blinkType=0 
-  locktoggleCE     = 11'b00001010000, // extra=00 store=0 start_blinking=0 read_input=1 led3=0 led2=1 led1=0 check2=0 check1=0 blinkType=0 
-  matchUCs         = 11'b01000100000, // extra=01 store=0 start_blinking=0 read_input=0 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  readPC           = 11'b00001100000, // extra=00 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  readUC           = 11'b01001100000, // extra=01 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  readUC2          = 11'b10001100000, // extra=10 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  reprogramSuccess = 11'b00110000001, // extra=00 store=1 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=1 
-  toggle_lock      = 11'b01000000000, // extra=01 store=0 start_blinking=0 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
-  wrongUCblink     = 11'b01010000000; // extra=01 store=0 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  IDLE             = 4'b0000, // extra=00 store=0 start_blinking=0 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  LED3LONGBLINK    = 4'b0001, // extra=00 store=0 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  CHECKPC          = 4'b0010, // extra=00 store=0 start_blinking=0 read_input=0 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  INPUT_CHECK      = 4'b0011, // extra=00 store=0 start_blinking=0 read_input=0 led3=0 led2=1 led1=0 check2=0 check1=0 blinkType=0 
+  LOCKTOGGLECE     = 4'b0100, // extra=00 store=0 start_blinking=0 read_input=1 led3=0 led2=1 led1=0 check2=0 check1=0 blinkType=0 
+  MATCHUCS         = 4'b0101, // extra=01 store=0 start_blinking=0 read_input=0 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  READPC           = 4'b0110, // extra=00 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  READUC           = 4'b0111, // extra=01 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  READUC2          = 4'b1000, // extra=10 store=0 start_blinking=0 read_input=1 led3=1 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  REPROGRAMSUCCESS = 4'b1001, // extra=00 store=1 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=1 
+  TOGGLE_LOCK      = 4'b1010, // extra=01 store=0 start_blinking=0 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
+  WRONGUCBLINK     = 4'b1011; // extra=01 store=0 start_blinking=1 read_input=0 led3=0 led2=0 led1=0 check2=0 check1=0 blinkType=0 
 
-  reg [10:0] state;
+  reg [3:0] state;
   initial state = IDLE;
-  reg [10:0] nextstate;
+  reg [3:0] nextstate;
 
   // comb always block
   always @(*) begin
     
     nextstate = state; // default to hold value because implied_loopback is set
+
+    /* 1. use blake's makeshift bstate posedge for state transitions
+       2. fix blinking timing 
+    */
+
     case (state)
       IDLE            : begin
-        testLED = 1;
-        testLED2 = 0;
-        //led1 = led1;
-        led2 = 0;
-        led3 = 0;
-        read_input = 1;							//is this correct?
-        if (button[3:0]==9) begin
-          testLED=0;
-          testLED2=1;
-          nextstate = locktoggleCE;
+        //testLED = 1;
+        //testLED2 = 0;
+        //led1 <= led1;
+        led2 <= 0;
+        led3 <= 0;
+        read_input <= 1;
+        compareType <= 0;							
+        if (button[3:0]==4'd9) begin
+          //testLED=0;
+          //testLED2=1;
+          nextstate = LOCKTOGGLECE;
         end
-        else if (button[3:0]==8) begin
-          testLED =0;
-          testLED2=1;
-          nextstate = readPC;
+        else if (button[3:0]==4'd8) begin
+          //testLED =0;
+          //testLED2=1;
+
+          nextstate = READPC;
         end
         else begin
           nextstate = IDLE;
         end
       end
-      LED3longblink   : begin
+      LED3LONGBLINK   : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = ledblink;
+        led2 <= 0;
+        led3 <= ledblink;
         read_input = 0;
         start_blinking = 1;
+        compareType <= 0;
         if (done_blinking) begin
           nextstate = IDLE;
           start_blinking = 0;
         end
         else if (!done_blinking) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
           start_blinking = 1;
         end
       end
-      checkPC         : begin
+      CHECKPC         : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = 1;
+        led2 <= 0;
+        led3 <= 1;
         read_input = 0;
+        compareType <= CHECKPC;
         if (data_ready&correct_input) begin
-          nextstate = readUC;
+          nextstate = READUC;
         end
         else if (data_ready&!correct_input|(button[3:0]==7)) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else if (!data_ready) begin
-          nextstate = checkPC;
+          nextstate = CHECKPC;
         end
       end
-      input_check     : begin
+      INPUT_CHECK     : begin
         //led1 = led1;
-        led2 = 1;
-        led3 = 0;
+        led2 <= 1;
+        led3 <= 0;
         read_input = 0;
+        compareType = COMPAREUC;
         if (button[3:0]==7) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else if (data_ready&correct_input) begin
-          nextstate = toggle_lock;
+          nextstate = TOGGLE_LOCK;
         end
         else if (!data_ready) begin
-          nextstate = input_check;
+          nextstate = INPUT_CHECK;
         end
         else if (data_ready&!correct_input) begin
-          nextstate = wrongUCblink;
+          nextstate = WRONGUCBLINK;
         end
       end
-      locktoggleCE    : begin
+      LOCKTOGGLECE    : begin
         //led1 = led1;
-        led2 = 1;
-        led3 = 0;
+        led2 <= 1;
+        led3 <= 0;
         read_input = 1;
-        testLED2 = 1;
+        compareType <= COMPAREUC;
+        //testLED2 = 1;
         if ((button[3:0]==9)&(validLength==1)) begin
-          nextstate = input_check;
+          nextstate = INPUT_CHECK;
         end
         else if (button[3:0]==7) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else begin
-          nextstate = locktoggleCE;
+          nextstate = LOCKTOGGLECE;
         end
       end
-      matchUCs        : begin
+      MATCHUCS        : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = 1;
+        led2 <= 0;
+        led3 <= 1;
         read_input = 0;
-        compareType = 2'b10;
+        compareType = MATCHUC;
         if (data_ready&correct_input) begin
-          nextstate = reprogramSuccess;
+          nextstate = REPROGRAMSUCCESS;
         end
         else if (data_ready&!correct_input|(button[3:0]==7)) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else if (!data_ready) begin
-          nextstate = matchUCs;
+          nextstate = MATCHUCS;
         end
       end
-      readPC          : begin
+      READPC          : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = 1;
+        led2 <= 0;
+        led3 <= 1;
         read_input = 1;
-        compareType = 2'b00;
+        compareType = CHECKPC;
         if ((button[3:0]==8)&validLengthPC) begin
-          nextstate = checkPC;
+          nextstate = CHECKPC;
         end
         else if ((button[3:0]==8)&!validLengthPC|(button[3:0]==7)) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else begin
-          nextstate = readPC;
+          nextstate = READPC;
         end
       end
-      readUC          : begin
+      READUC          : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = 1;
+        led2 <= 0;
+        led3 <= 1;
         read_input = 1;
-        compareType = 2'b11;
+        compareType = STOREUC;
         if ((button[3:0]==8)&validLength) begin
-          nextstate = readUC2;
+          nextstate = READUC2;
         end
         else if ((button[3:0]==8)&!validLength|(button[3:0]==7)) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else begin
-          nextstate = readUC;
+          nextstate = READUC;
         end
       end
-      readUC2         : begin
+      READUC2         : begin
         //led1 = led1;
-        led2 = 0;
-        led3 = 1;
+        led2 <= 0;
+        led3 <= 1;
         read_input = 1;
-        compareType = 2'b10;
+        compareType = MATCHUC;
         if ((button[3:0]==8)&validLength) begin
-          nextstate = matchUCs;
+          nextstate = MATCHUCS;
         end
         else if ((button[3:0]==8)&!validLength|(button[3:0]==7)) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else begin
-          nextstate = readUC2;
+          nextstate = READUC2;
         end
       end
-      reprogramSuccess: begin
+      REPROGRAMSUCCESS: begin
         //led1 = led1;
-        led2 = 0;
-        led3 = ledblink;
+        led2 <= 0;
+        led3 <= ledblink;
         read_input = 0;
         start_blinking = 1;
         blinkType = 1;
         store = 1;
+        compareType <= 0;
         if (done_blinking) begin
           store = 0;
           blinkType = 0;
@@ -235,33 +259,35 @@ module controller (
           store = 1;
           blinkType = 1;
           start_blinking = 1;
-          nextstate = reprogramSuccess;
+          nextstate = REPROGRAMSUCCESS;
         end
       end
-      toggle_lock     : begin
-        led1 = 1;//!led1;
-        led2 = 0;
-        led3 = 0;
+      TOGGLE_LOCK     : begin
+        led1 <= !led1;
+        led2 <= 0;
+        led3 <= 0;
         read_input = 0;
+        compareType <= 0;
         if (button[3:0]==7) begin
-          nextstate = LED3longblink;
+          nextstate = LED3LONGBLINK;
         end
         else begin
           nextstate = IDLE;
         end
       end
-      wrongUCblink    : begin
+      WRONGUCBLINK    : begin
         //led1 = led1;
-        led2 = ledblink;
-        led3 = 0;
+        led2 <= ledblink;
+        led3 <= 0;
         read_input = 0;
         start_blinking = 1;
+        compareType <= 0;
         if (done_blinking) begin
           nextstate = IDLE;
           start_blinking = 0;
         end
         else if (!done_blinking) begin
-          nextstate = wrongUCblink;
+          nextstate = WRONGUCBLINK;
           start_blinking = 1;
         end
       end
@@ -282,6 +308,10 @@ module controller (
   // sequential always block
   always @(posedge hwclk) begin
       state <= nextstate;
+    testLED <= state[0];
+    testLED2 <= state[1];
+    testLED3 <= state[2];
+    testLED4 <= state[3]; 
   end
 
 /*
@@ -292,28 +322,28 @@ module controller (
     case (state)
       IDLE            :
         statename = "IDLE";
-      LED3longblink   :
-        statename = "LED3longblink";
-      checkPC         :
-        statename = "checkPC";
-      input_check     :
-        statename = "input_check";
-      locktoggleCE    :
-        statename = "locktoggleCE";
-      matchUCs        :
-        statename = "matchUCs";
-      readPC          :
-        statename = "readPC";
-      readUC          :
-        statename = "readUC";
-      readUC2         :
-        statename = "readUC2";
-      reprogramSuccess:
-        statename = "reprogramSuccess";
-      toggle_lock     :
-        statename = "toggle_lock";
-      wrongUCblink    :
-        statename = "wrongUCblink";
+      LED3LONGBLINK   :
+        statename = "LED3LONGBLINK";
+      CHECKPC         :
+        statename = "CHECKPC";
+      INPUT_CHECK     :
+        statename = "INPUT_CHECK";
+      LOCKTOGGLECE    :
+        statename = "LOCKTOGGLECE";
+      MATCHUCS        :
+        statename = "MATCHUCS";
+      READPC          :
+        statename = "READPC";
+      READUC          :
+        statename = "READUC";
+      READUC2         :
+        statename = "READUC2";
+      REPROGRAMSUCCESS:
+        statename = "REPROGRAMSUCCESS";
+      TOGGLE_LOCK     :
+        statename = "TOGGLE_LOCK";
+      WRONGUCBLINK    :
+        statename = "WRONGUCBLINK";
       default         :
         statename = "XXXXXXXXXXXXXXXX";
     endcase

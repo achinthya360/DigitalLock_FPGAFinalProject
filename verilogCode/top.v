@@ -82,10 +82,10 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     wire validUClength;
     wire validPClength;
     wire readInput; // = 1; // change later, assign to actual readInput from controller
-    initial readInput = 1;
+    //initial readInput = 1;
     wire inputWrong; // = 0; // change later, assign to correctness checker module
-    initial inputWrong = 0;
-
+    //initial inputWrong = 0;
+    
     lengthChecker lCHECK(
         .hwclk(hwclk),
         .bstate(bstate),
@@ -94,15 +94,16 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .readInput(readInput),
         .validUC(validUClength),
         .validPC(validPClength),
-    );
+    ); 
 
     wire store;
     wire [1:0] compareType;
-    initial compareType = 2'b01;
+    //initial compareType = 2'b01;
     wire correct;
     wire newUC;
     wire data_ready;
 
+    
     validChecker vCHECK(
         .hwclk(hwclk),
         .bstate(bstate),
@@ -117,31 +118,32 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .newUC(newUC),
         .dataready(data_ready),
         
-        
+        /*
         .led1(led1),
         .led2(led2),
         .led3(led3),
         .led4(led4),   
-    );
+        */
+    ); 
 
-    wire check1;
-    wire check2;
-    wire blinkTypecontrol;
-    wire led_1;
+    //wire check1;
+    //wire check2;
+    //wire blinkTypecontrol;
+    //wire led_1;
 
-    /*
+    
     controller controlFSM(
-        .blinkType(blinkTypecontrol),
-        .check1(check1),        // are these check1 and 2 vestiges of logic before compareType was introduced???
-        .check2(check2),
-        .led1(led_1),
+        .blinkType(blinkType),
+        //.check1(check1),        // are these check1 and 2 vestiges of logic before compareType was introduced???
+        //.check2(check2),
+        .led1(led1),
         .led2(led2),
         .led3(led3),
         .read_input(readInput),
         .start_blinking(startblinking),
         .store(store),
         .compareType(compareType),
-        .button(button_local),
+        .button(button),
         .hwclk(hwclk),
         .bstate(bstate),
         .correct_input(correct),
@@ -150,9 +152,12 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .ledblink(ledblink),
         .validLength(validUClength),
         .validLengthPC(validPClength),
-        .testLED       (testLED),
-        .testLED2      (testLED2)
-    ); */
+        .testLED       (led5),
+        .testLED2      (led6),
+        .testLED3      (led7),
+        .testLED4      (led8)
+    ); 
+    
     
     /*
     assign led8 = readInput;
@@ -168,20 +173,27 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     end */
 
     
-    wire testLED; 
-    assign testLED = validUClength;
-    wire test2LED;
-    assign test2LED = validPClength;
-    assign led7 = testLED;
-    assign led8 = test2LED;  
+    //wire testLED; 
+    //assign testLED = validUClength;
+    //wire test2LED;
+    //assign test2LED = validPClength;
+    /*
+    assign led7 = validUClength;
+    assign led8 = validPClength;  
 
-    assign led5 = correct;
-    assign led6 = store;
+    assign led6 = correct;
+    */
+    //assign led5 = testLED2;
+    assign led4 = correct;
+    
     /*
     always @ (negedge bstate) begin
         if(readInput) begin
             button_local = button;
+        end
+    end */
 
+    /*
             if(button_local[3:0] == 8) begin
                 if(compareType == 2'b01) begin 
                     compareType <= 2'b11;
