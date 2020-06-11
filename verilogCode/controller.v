@@ -50,7 +50,11 @@ module controller (
   initial testLED3 = 0;
   initial testLED4 = 0;
 */
-
+  
+  reg prevbstate;
+  reg bstatechange;
+  initial bstatechange = 0;
+  
   parameter COMPAREPC = 2'b00;
   parameter COMPAREUC = 2'b01;
   parameter MATCHUC = 2'b10;
@@ -79,10 +83,19 @@ module controller (
   always @(*) begin
     
     nextstate = state; // default to hold value because implied_loopback is set
-
+    
     /* 1. use blake's makeshift bstate posedge for state transitions
        2. fix blinking timing 
     */
+    if(prevbstate&(!bstate)) begin
+      bstatechange = 1;
+    end
+    else begin
+      bstatechange = 0;
+    end  
+    
+    start_blinking <= 0;
+    blinkType <= 0;
 
     case (state)
       IDLE            : begin
@@ -92,13 +105,14 @@ module controller (
         led2 <= 0;
         led3 <= 0;
         read_input <= 1;
-        compareType <= 0;							
-        if (button[3:0]==4'd9) begin
+        compareType <= 0;
+        start_blinking <= 0;							
+        if (bstatechange & button[3:0]==4'd9) begin
           //testLED=0;
           //testLED2=1;
           nextstate = LOCKTOGGLECE;
         end
-        else if (button[3:0]==4'd8) begin
+        else if (bstatechange & button[3:0]==4'd8) begin
           //testLED =0;
           //testLED2=1;
 
@@ -129,16 +143,17 @@ module controller (
         led2 <= 0;
         led3 <= 1;
         read_input = 0;
-        compareType <= CHECKPC;
-        if (data_ready&correct_input) begin
+        compareType <= COMPAREPC;
+        if (/*data_ready&*/correct_input) begin
           nextstate = READUC;
         end
-        else if (data_ready&!correct_input|(button[3:0]==7)) begin
+        else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
+        /*
         else if (!data_ready) begin
           nextstate = CHECKPC;
-        end
+        end */
       end
       INPUT_CHECK     : begin
         //led1 = led1;
@@ -149,13 +164,14 @@ module controller (
         if (button[3:0]==7) begin
           nextstate = LED3LONGBLINK;
         end
-        else if (data_ready&correct_input) begin
+        else if (/*data_ready&*/correct_input) begin
           nextstate = TOGGLE_LOCK;
         end
+        /*
         else if (!data_ready) begin
           nextstate = INPUT_CHECK;
-        end
-        else if (data_ready&!correct_input) begin
+        end */
+        else if (/*data_ready&*/!correct_input) begin
           nextstate = WRONGUCBLINK;
         end
       end
@@ -166,10 +182,13 @@ module controller (
         read_input = 1;
         compareType <= COMPAREUC;
         //testLED2 = 1;
-        if ((button[3:0]==9)&(validLength==1)) begin
+        if (bstatechange&(button[3:0]==9)&(validLength)) begin
           nextstate = INPUT_CHECK;
         end
-        else if (button[3:0]==7) begin
+        else if(bstatechange&(button[3:0]==9)&!validLength) begin
+          nextstate = WRONGUCBLINK;
+        end
+        else if (bstatechange&button[3:0]==7) begin
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -182,26 +201,27 @@ module controller (
         led3 <= 1;
         read_input = 0;
         compareType = MATCHUC;
-        if (data_ready&correct_input) begin
+        if (/*data_ready&*/correct_input) begin
           nextstate = REPROGRAMSUCCESS;
         end
-        else if (data_ready&!correct_input|(button[3:0]==7)) begin
+        else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
+        /*
         else if (!data_ready) begin
           nextstate = MATCHUCS;
-        end
+        end */
       end
       READPC          : begin
         //led1 = led1;
         led2 <= 0;
         led3 <= 1;
         read_input = 1;
-        compareType = CHECKPC;
-        if ((button[3:0]==8)&validLengthPC) begin
+        compareType = COMPAREPC;
+        if (bstatechange&(button[3:0]==8)&validLengthPC) begin
           nextstate = CHECKPC;
         end
-        else if ((button[3:0]==8)&!validLengthPC|(button[3:0]==7)) begin
+        else if (bstatechange&(button[3:0]==8)&!validLengthPC|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -214,10 +234,10 @@ module controller (
         led3 <= 1;
         read_input = 1;
         compareType = STOREUC;
-        if ((button[3:0]==8)&validLength) begin
+        if (bstatechange&(button[3:0]==8)&validLength) begin
           nextstate = READUC2;
         end
-        else if ((button[3:0]==8)&!validLength|(button[3:0]==7)) begin
+        else if (bstatechange&(button[3:0]==8)&!validLength|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -230,10 +250,10 @@ module controller (
         led3 <= 1;
         read_input = 1;
         compareType = MATCHUC;
-        if ((button[3:0]==8)&validLength) begin
+        if (bstatechange&(button[3:0]==8)&validLength) begin
           nextstate = MATCHUCS;
         end
-        else if ((button[3:0]==8)&!validLength|(button[3:0]==7)) begin
+        else if (bstatechange&(button[3:0]==8)&!validLength|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -263,12 +283,12 @@ module controller (
         end
       end
       TOGGLE_LOCK     : begin
-        led1 <= !led1;
+        led1 <= ~led1;
         led2 <= 0;
         led3 <= 0;
         read_input = 0;
         compareType <= 0;
-        if (button[3:0]==7) begin
+        if (bstatechange&button[3:0]==7) begin
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -281,6 +301,7 @@ module controller (
         led3 <= 0;
         read_input = 0;
         start_blinking = 1;
+        blinkType <= 0;
         compareType <= 0;
         if (done_blinking) begin
           nextstate = IDLE;
@@ -296,8 +317,8 @@ module controller (
 
   // Assign reg'd outputs to state bits
   //assign blinkType = state[0];
-  assign check1 = state[1];
-  assign check2 = state[2];
+  //assign check1 = state[1];
+  //assign check2 = state[2];
   //assign led1 = state[3];
   //assign led2 = state[4];
   //assign led3 = state[5];
@@ -312,6 +333,8 @@ module controller (
     testLED2 <= state[1];
     testLED3 <= state[2];
     testLED4 <= state[3]; 
+
+    prevbstate <= bstate;
   end
 
 /*
