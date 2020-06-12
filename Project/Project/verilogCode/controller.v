@@ -109,14 +109,9 @@ module controller (
         start_blinking <= 0;
         store = 0;					
         if (bstatechange & button[3:0]==4'd9) begin
-          //testLED=0;
-          //testLED2=1;
           nextstate = LOCKTOGGLECE;
         end
         else if (bstatechange & button[3:0]==4'd8) begin
-          //testLED =0;
-          //testLED2=1;
-
           nextstate = READPC;
         end
         else begin
@@ -145,16 +140,12 @@ module controller (
         led3 <= 1;
         read_input = 0;
         compareType <= COMPAREPC;
-        if (/*data_ready&*/correct_input) begin
+        if (correct_input) begin
           nextstate = READUC;
         end
-        else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
+        else if (!correct_input|((button[3:0]==7)&bstatechange)) begin
           nextstate = LED3LONGBLINK;
         end
-        /*
-        else if (!data_ready) begin
-          nextstate = CHECKPC;
-        end */
       end
       INPUT_CHECK     : begin
         //led1 = led1;
@@ -165,14 +156,14 @@ module controller (
         if (button[3:0]==7) begin
           nextstate = LED3LONGBLINK;
         end
-        else if (/*data_ready&*/correct_input) begin
+        else if (correct_input) begin
           nextstate = TOGGLE_LOCK;
         end
         /*
         else if (!data_ready) begin
           nextstate = INPUT_CHECK;
         end */
-        else if (/*data_ready&*/!correct_input) begin
+        else if (!correct_input) begin
           nextstate = WRONGUCBLINK;
         end
       end

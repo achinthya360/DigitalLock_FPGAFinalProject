@@ -55,12 +55,7 @@ module blinker (
     /* specify blinkLengths in units: tenths of seconds */
     reg [31:0] BLINK_PERIODON;// = PERIODON1;
     reg [31:0] BLINK_PERIODOFF;// = PERIODOFF1;
-    reg [3:0] timesToBlink;// = BLINKCOUNT1;
-
-    /*initial BLINK_PERIODON = PERIODON1;
-    initial BLINK_PERIODOFF = PERIODOFF1;
-    initial timesToBlink = BLINKCOUNT1; 
-    */   
+    reg [3:0] timesToBlink;// = BLINKCOUNT1;  
 
     // for testing only
     /*
@@ -104,15 +99,6 @@ module blinker (
             end
         end 
         else begin    // module is done blinking
-            /*if(doneCounter < 3'd7) begin
-                //clk_led <= 0; // change back to 0
-                done <= 1;
-                doneCounter <= doneCounter + 1;
-            end
-            else begin
-                //clk_led <= 0;
-                done <= 0;
-            end*/
             if(start_blinking) begin
                 done <= 1;
             end
