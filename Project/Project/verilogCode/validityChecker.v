@@ -20,10 +20,10 @@ module validChecker (
 	reg [3:0] prevUC1, prevUC2, prevUC3, prevUC4, prevUC5, prevUC6;
 	
 	/* just testing purposes */
-	assign led1 = prev6[0];
-	assign led2 = prev6[1];
-	assign led3 = prev6[2];
-	assign led4 = prev6[3];
+	assign led1 = correctUC[0];
+	assign led2 = correctUC[1];
+	assign led3 = correctUC[2];
+	assign led4 = correctUC[3];
 
 	reg [23:0] correctUC;
     initial correctUC = (correctUC1 << 20) + (correctUC2 << 16) + (correctUC3 << 12)
@@ -124,7 +124,7 @@ module validChecker (
 		end
 	end
 
-	always @(negedge store) begin
+	always @(posedge store) begin
 		// newUC[23:20] = prev1;
 		// newUC[19:16] = prev2;
 		// newUC[15:12] = prev3;

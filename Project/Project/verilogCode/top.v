@@ -118,12 +118,12 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .newUC(newUC),
         .dataready(data_ready),
         
-        /*
-        .led1(led1),
-        .led2(led2),
-        .led3(led3),
-        .led4(led4),   
-        */
+        
+        .led1(led5),
+        .led2(led6),
+        .led3(led7),
+        .led4(led8),   
+        
     ); 
 
     //wire check1;
@@ -152,10 +152,10 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .ledblink(ledblink),
         .validLength(validUClength),
         .validLengthPC(validPClength),
-        .testLED       (led5),
-        .testLED2      (led6),
-        .testLED3      (led7),
-        .testLED4      (led8)
+        // .testLED       (led5),
+        // .testLED2      (led6),
+        // .testLED3      (led7),
+        // .testLED4      (led8)
     ); 
     
     

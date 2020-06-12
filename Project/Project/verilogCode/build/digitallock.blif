@@ -556,7 +556,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0111111100000000
-.gate SB_LUT4 I0=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0 I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0
+.gate SB_LUT4 I0=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0 I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0100000000000000
@@ -564,11 +564,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0011111111111100
-.gate SB_LUT4 I0=blinks.blink_timer[0] I1=blinks.blink_timer[1] I2=blinks.blink_timer[2] I3=blinks.blink_timer[3] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=blinks.blink_timer[13] I2=blinks.blink_timer[6] I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2
+.gate SB_LUT4 I0=$false I1=blinks.blink_timer[13] I2=blinks.blink_timer[14] I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0000001100000000
@@ -576,23 +572,31 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=blinks.blink_timer[14] I1=blinks.blink_timer[19] I2=blinks.blink_timer[22] I3=blinks.blink_timer[7] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I3
+.gate SB_LUT4 I0=blinks.blink_timer[6] I1=blinks.blink_timer[7] I2=blinks.blink_timer[19] I3=blinks.blink_timer[22] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=$false I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_I2_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100000000000000
+.gate SB_LUT4 I0=blinks.blink_timer[9] I1=blinks.blink_timer[12] I2=blinks.BLINK_PERIODON[21] I3=blinks.blink_timer[10] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_I2_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111100000000
 .gate SB_LUT4 I0=$false I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 1100000000000000
-.gate SB_LUT4 I0=blinks.blink_timer[31] I1=blinks.blink_timer[27] I2=blinks.blink_timer[28] I3=blinks.blink_timer[29] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1
+.gate SB_LUT4 I0=blinks.blink_timer[28] I1=blinks.blink_timer[30] I2=blinks.blink_timer[31] I3=blinks.blink_timer[29] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=blinks.blink_timer[24] I1=blinks.blink_timer[25] I2=blinks.blink_timer[26] I3=blinks.blink_timer[30] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I2
+.gate SB_LUT4 I0=blinks.blink_timer[24] I1=blinks.blink_timer[25] I2=blinks.blink_timer[26] I3=blinks.blink_timer[27] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=blinks.blink_timer[17] I2=blinks.blink_timer[16] I3=blinks.BLINK_PERIODON[22] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I3
+.gate SB_LUT4 I0=$false I1=blinks.blink_timer[16] I2=blinks.blink_timer[17] I3=blinks.BLINK_PERIODON[22] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 1100000000000011
@@ -618,34 +622,34 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000111100000000
-.gate SB_LUT4 I0=$false I1=blinks.blink_timer[9] I2=blinks.blink_timer[12] I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1100001100000000
-.gate SB_LUT4 I0=blinks.blink_timer[9] I1=blinks.blink_timer[18] I2=blinks.blink_timer[21] I3=blinks.BLINK_PERIODON[21] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3
+.gate SB_LUT4 I0=blinks.blink_timer[6] I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000001
-.gate SB_LUT4 I0=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0 I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1
+.param LUT_INIT 0100000000000000
+.gate SB_LUT4 I0=blinks.blink_timer[0] I1=blinks.blink_timer[1] I2=blinks.blink_timer[2] I3=blinks.blink_timer[3] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=blinks.blink_timer[20] I1=blinks.blink_timer[7] I2=blinks.BLINK_PERIODON[22] I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000100000000
-.gate SB_LUT4 I0=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=blinks.blink_timer[13] I2=blinks.blink_timer[6] I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3
+.param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=blinks.blink_timer[23] I1=blinks.blink_timer[13] I2=blinks.blink_timer[14] I3=blinks.blink_timer[15] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000100000000
-.gate SB_LUT4 I0=$false I1=blinks.blink_timer[19] I2=blinks.blink_timer[22] I3=blinks.BLINK_PERIODON[22] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0011111111111100
-.gate SB_LUT4 I0=blinks.blink_timer[14] I1=blinks.blink_timer[23] I2=blinks.blink_timer[10] I3=blinks.blink_timer[15] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
+.gate SB_LUT4 I0=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=blinks.blink_timer[18] I2=blinks.blink_timer[21] I3=blinks.BLINK_PERIODON[21] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0001000000000000
+.param LUT_INIT 1100000000000010
+.gate SB_LUT4 I0=$false I1=$false I2=blinks.blink_timer[9] I3=blinks.blink_timer[12] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 0000000000001111
+.gate SB_LUT4 I0=blinks.blink_timer[7] I1=blinks.blink_timer[19] I2=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3 O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1001000000000000
+.gate SB_LUT4 I0=blinks.blink_timer[7] I1=blinks.blink_timer[20] I2=blinks.blink_timer[22] I3=blinks.BLINK_PERIODON[22] O=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000000000000001
 .gate SB_CARRY CI=blinks.BLINK_PERIODON_SB_CARRY_I0_CO[31] CO=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 I0=$false I1=blinks.clk_led_SB_DFF_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_CARRY_CO_I1
 .attr src "top.v:74.13-80.6|blinker.v:81|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_DFFESR C=hwclk D=controlFSM.start_blinking E=blinks.done_SB_DFFESR_Q_E Q=blinks.done R=blinks.numBlinks_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_I2_O_SB_LUT4_I0_O
@@ -802,10 +806,6 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000000000001111
-.gate SB_LUT4 I0=$false I1=$false I2=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2 I3=button_press.counter[0] O=button_press.counter_SB_LUT4_I3_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000111111111111
 .gate SB_DFFESR C=hwclk D=button_press.debounce_timer_SB_DFFESR_Q_D E=button_press.debouncing Q=button_press.debounce_timer[31] R=button_press.bstateReg_SB_DFFESS_Q_E_SB_LUT4_I2_O
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:56.16-66.6|Button_Code.v:90.5-129.8|/usr/local/bin/../share/yosys/ice40/cells_map.v:8.57-8.103"
@@ -1105,39 +1105,39 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=button_press.debounce_timer[0] I1=button_press.debounce_timer[15] I2=button_press.debounce_timer[16] I3=button_press.debounce_timer[14] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I0
+.gate SB_LUT4 I0=button_press.debounce_timer[5] I1=button_press.debounce_timer[8] I2=button_press.debounce_timer[9] I3=button_press.debounce_timer[11] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=button_press.debounce_timer[1] I1=button_press.debounce_timer[2] I2=button_press.debounce_timer[3] I3=button_press.debounce_timer[4] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000000000000001
+.gate SB_LUT4 I0=button_press.debounce_timer[0] I1=button_press.debounce_timer[15] I2=button_press.debounce_timer[16] I3=button_press.debounce_timer[14] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0100000000000000
-.gate SB_LUT4 I0=button_press.debounce_timer[6] I1=button_press.debounce_timer[7] I2=button_press.debounce_timer[10] I3=button_press.debounce_timer[12] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I1
+.gate SB_LUT4 I0=button_press.debounce_timer[6] I1=button_press.debounce_timer[7] I2=button_press.debounce_timer[10] I3=button_press.debounce_timer[12] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=button_press.debounce_timer[5] I1=button_press.debounce_timer[8] I2=button_press.debounce_timer[9] I3=button_press.debounce_timer[11] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=button_press.debounce_timer[1] I1=button_press.debounce_timer[2] I2=button_press.debounce_timer[3] I3=button_press.debounce_timer[4] O=button_press.debouncing_SB_LUT4_I2_I0_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000000001
 .gate SB_LUT4 I0=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I0 I1=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I1 I2=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I2 I3=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I3 O=button_press.debouncing_SB_LUT4_I2_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=button_press.debounce_timer[20] I1=button_press.debounce_timer[21] I2=button_press.debounce_timer[22] I3=button_press.debounce_timer[23] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I0
+.gate SB_LUT4 I0=button_press.debounce_timer[28] I1=button_press.debounce_timer[29] I2=button_press.debounce_timer[30] I3=button_press.debounce_timer[31] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=button_press.debounce_timer[13] I1=button_press.debounce_timer[17] I2=button_press.debounce_timer[18] I3=button_press.debounce_timer[19] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I1
+.gate SB_LUT4 I0=button_press.debounce_timer[24] I1=button_press.debounce_timer[25] I2=button_press.debounce_timer[26] I3=button_press.debounce_timer[27] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=button_press.debounce_timer[28] I1=button_press.debounce_timer[29] I2=button_press.debounce_timer[30] I3=button_press.debounce_timer[31] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I2
+.gate SB_LUT4 I0=button_press.debounce_timer[20] I1=button_press.debounce_timer[21] I2=button_press.debounce_timer[22] I3=button_press.debounce_timer[23] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=button_press.debounce_timer[24] I1=button_press.debounce_timer[25] I2=button_press.debounce_timer[26] I3=button_press.debounce_timer[27] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I3
+.gate SB_LUT4 I0=button_press.debounce_timer[13] I1=button_press.debounce_timer[17] I2=button_press.debounce_timer[18] I3=button_press.debounce_timer[19] O=button_press.debouncing_SB_LUT4_I2_I1_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
@@ -1366,15 +1366,15 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000000000001111
-.gate SB_LUT4 I0=$false I1=$false I2=compareType[1] I3=compareType[0] O=compareType_SB_LUT4_I2_O
+.gate SB_LUT4 I0=$false I1=$false I2=compareType[0] I3=compareType[1] O=compareType_SB_LUT4_I2_O
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=compareType[0] I1=led2_SB_LUT4_O_I1 I2=compareType_SB_LUT4_O_I2 I3=led2_SB_LUT4_O_I3 O=compareType[0]
+.gate SB_LUT4 I0=compareType[1] I1=led2_SB_LUT4_O_I1 I2=compareType_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I3 O=compareType[1]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1111001011111111
-.gate SB_LUT4 I0=compareType[1] I1=led2_SB_LUT4_O_I1 I2=compareType_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I2 O=compareType[1]
+.gate SB_LUT4 I0=compareType[0] I1=led2_SB_LUT4_O_I1 I2=compareType_SB_LUT4_O_I2 I3=led2_SB_LUT4_O_I3 O=compareType[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1111001011111111
@@ -1394,82 +1394,82 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000111100000000
-.gate SB_LUT4 I0=$false I1=$false I2=blinks.done I3=controlFSM.store_SB_LUT4_O_I3 O=controlFSM.blinkType_SB_LUT4_O_I1
+.gate SB_LUT4 I0=$false I1=$false I2=controlFSM.blinkType_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=controlFSM.state[3] O=controlFSM.blinkType_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000111100000000
-.gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 I3=led3_SB_LUT4_O_I2_SB_LUT4_O_I3 O=controlFSM.blinkType_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0000000000111111
-.gate SB_LUT4 I0=$false I1=$false I2=controlFSM.nextstate_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_I3 O=controlFSM.nextstate[1]
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000011111111
-.gate SB_LUT4 I0=$false I1=$false I2=controlFSM.nextstate_SB_LUT4_O_1_I2 I3=controlFSM.nextstate_SB_LUT4_O_1_I3 O=controlFSM.nextstate[0]
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000111111111111
-.gate SB_LUT4 I0=compareType_SB_LUT4_O_I2 I1=led3_SB_LUT4_O_I2_SB_LUT4_O_I2 I2=lCHECK.validUCLength_SB_LUT4_I3_I1 I3=controlFSM.nextstate_SB_LUT4_O_1_I2_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0011010100000000
-.gate SB_LUT4 I0=led3_SB_LUT4_O_I2_SB_LUT4_O_I3 I1=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I1 I2=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I3
+.param LUT_INIT 1111000000000000
+.gate SB_LUT4 I0=controlFSM.state[1] I1=controlFSM.state[2] I2=blinks.done I3=controlFSM.state[0] O=controlFSM.blinkType_SB_LUT4_O_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000100000000
-.gate SB_LUT4 I0=$false I1=vCHECK.correct I2=lCHECK.state_SB_DFFSR_Q_R I3=led2_SB_LUT4_O_I3_SB_LUT4_O_I2 O=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I1
+.gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 I3=led3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.blinkType_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1111001100000000
-.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_1_O I1=button_press.buttonReg[0] I2=controlFSM.prevbstate_SB_LUT4_I3_O I3=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111100000000000
-.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_O I1=controlFSM.nextstate_SB_LUT4_O_2_I1 I2=controlFSM.nextstate_SB_LUT4_O_2_I2 I3=controlFSM.nextstate_SB_LUT4_O_2_I3 O=controlFSM.nextstate[2]
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111010011111111
-.gate SB_LUT4 I0=led3_SB_LUT4_I0_I3 I1=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 I2=button_press.buttonReg[0] I3=controlFSM.prevbstate_SB_LUT4_I3_1_O O=controlFSM.nextstate_SB_LUT4_O_2_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1010110011101110
-.gate SB_LUT4 I0=led3_SB_LUT4_I0_I2 I1=vCHECK.correct I2=controlFSM.prevbstate_SB_LUT4_I3_1_O I3=controlFSM.store_SB_LUT4_O_I0 O=controlFSM.nextstate_SB_LUT4_O_2_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000011101110111
-.gate SB_LUT4 I0=controlFSM.nextstate_SB_LUT4_O_I2 I1=lCHECK.validUCLength I2=controlFSM.nextstate_SB_LUT4_O_3_I2 I3=controlFSM.nextstate_SB_LUT4_O_3_I3 O=controlFSM.nextstate[3]
+.param LUT_INIT 0000000000111111
+.gate SB_LUT4 I0=led3_SB_LUT4_O_I3_SB_LUT4_O_I2 I1=controlFSM.nextstate_SB_LUT4_O_I1 I2=controlFSM.nextstate_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_I3 O=controlFSM.nextstate[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0010111111111111
-.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_O I1=led3_SB_LUT4_O_I2_SB_LUT4_O_I2 I2=compareType_SB_LUT4_O_I2 I3=lCHECK.validUCLength_SB_LUT4_I3_I1 O=controlFSM.nextstate_SB_LUT4_O_3_I2
+.gate SB_LUT4 I0=$false I1=$false I2=controlFSM.nextstate_SB_LUT4_O_1_I2 I3=controlFSM.nextstate_SB_LUT4_O_1_I3 O=controlFSM.nextstate[1]
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000111110111011
-.gate SB_LUT4 I0=led3_SB_LUT4_O_I2_SB_LUT4_O_I3 I1=vCHECK.correct I2=controlFSM.blinkType_SB_LUT4_O_I1 I3=controlFSM.nextstate_SB_LUT4_O_3_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_3_I3
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 1111000011111111
+.gate SB_LUT4 I0=controlFSM.state[0] I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=controlFSM.prevbstate_SB_LUT4_I3_O I3=led3_SB_LUT4_I0_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000011100000000
-.gate SB_LUT4 I0=$false I1=led2_SB_LUT4_O_I3_SB_LUT4_O_I2 I2=lCHECK.state_SB_DFFSR_Q_R I3=led3_SB_LUT4_O_I1_SB_LUT4_I1_I3 O=controlFSM.nextstate_SB_LUT4_O_3_I3_SB_LUT4_O_I3
+.gate SB_LUT4 I0=vCHECK.correct I1=led3_SB_LUT4_I0_I2 I2=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_2_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0111000000000000
+.gate SB_LUT4 I0=vCHECK.correct I1=led3_SB_LUT4_O_I3_SB_LUT4_O_I3 I2=controlFSM.nextstate_SB_LUT4_O_2_I2 I3=controlFSM.nextstate_SB_LUT4_O_2_I3 O=controlFSM.nextstate[3]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111111111111
+.gate SB_LUT4 I0=compareType_SB_LUT4_O_I2 I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=controlFSM.blinkType_SB_LUT4_O_I1 I3=controlFSM.nextstate_SB_LUT4_O_2_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_2_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000011100000000
+.gate SB_LUT4 I0=$false I1=led2_SB_LUT4_O_I3_SB_LUT4_O_I2 I2=lCHECK.state_SB_DFFSR_Q_R I3=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_2_I3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0000000011110011
-.gate SB_LUT4 I0=$false I1=controlFSM.prevbstate_SB_LUT4_I3_1_O I2=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 I3=button_press.buttonReg[0] O=controlFSM.nextstate_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1100000000000000
-.gate SB_LUT4 I0=controlFSM.store_SB_LUT4_O_I0 I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I3
+.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_O I1=controlFSM.nextstate_SB_LUT4_O_3_I1 I2=controlFSM.nextstate_SB_LUT4_O_3_I2 I3=controlFSM.nextstate_SB_LUT4_O_3_I3 O=controlFSM.nextstate[2]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000011100000000
-.gate SB_LUT4 I0=controlFSM.state[0] I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=controlFSM.prevbstate_SB_LUT4_I3_O I3=led3_SB_LUT4_I0_I3 O=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I2
+.param LUT_INIT 1111010011111111
+.gate SB_LUT4 I0=led3_SB_LUT4_I0_I3 I1=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 I2=button_press.buttonReg[0] I3=controlFSM.prevbstate_SB_LUT4_I3_1_O O=controlFSM.nextstate_SB_LUT4_O_3_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000011100000000
-.gate SB_LUT4 I0=$false I1=vCHECK.correct I2=led3_SB_LUT4_I0_I2 I3=controlFSM.nextstate_SB_LUT4_O_3_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3
+.param LUT_INIT 1010110011101110
+.gate SB_LUT4 I0=led3_SB_LUT4_I0_I2 I1=vCHECK.correct I2=controlFSM.prevbstate_SB_LUT4_I3_1_O I3=controlFSM.store_SB_LUT4_O_I0 O=controlFSM.nextstate_SB_LUT4_O_3_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0011111100000000
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000011101110111
+.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.validUCLength_SB_LUT4_I3_I1 I3=controlFSM.prevbstate_SB_LUT4_I3_O O=controlFSM.nextstate_SB_LUT4_O_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 0000000000001111
+.gate SB_LUT4 I0=compareType_SB_LUT4_O_I2 I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=controlFSM.nextstate_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000000000001101
+.gate SB_LUT4 I0=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=controlFSM.blinkType_SB_LUT4_O_I1_SB_LUT4_O_I2 I2=led3_SB_LUT4_I0_I2 I3=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000000100000000
+.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_1_O I1=button_press.buttonReg[0] I2=controlFSM.prevbstate_SB_LUT4_I3_O I3=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1111100000000000
+.gate SB_LUT4 I0=lCHECK.state_SB_DFFSR_Q_R I1=vCHECK.correct I2=led2_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000000001001111
+.gate SB_LUT4 I0=blinks.done I1=controlFSM.state[0] I2=controlFSM.state[1] I3=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 O=controlFSM.nextstate_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000000000000
 .gate SB_DFF C=hwclk D=button_press.bstateReg Q=controlFSM.prevbstate
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:135.16-159.6|controller.v:327.3-335.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
@@ -1497,10 +1497,10 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0000111111001100
-.gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=controlFSM.state[2] I3=controlFSM.state[1] O=controlFSM.read_input_SB_LUT4_O_I2
+.gate SB_LUT4 I0=$false I1=controlFSM.state[2] I2=controlFSM.state[0] I3=controlFSM.state[1] O=controlFSM.read_input_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0000111111001100
+.param LUT_INIT 0011001111110000
 .gate SB_LUT4 I0=controlFSM.start_blinking_SB_LUT4_O_I0 I1=blinks.done I2=controlFSM.blinkType_SB_LUT4_O_I3 I3=controlFSM.start_blinking_SB_LUT4_O_I3 O=controlFSM.start_blinking
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
@@ -1509,7 +1509,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1111001011111111
-.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[2] I2=controlFSM.state[1] I3=controlFSM.start_blinking O=controlFSM.start_blinking_SB_LUT4_O_I3
+.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[1] I2=controlFSM.state[2] I3=controlFSM.start_blinking O=controlFSM.start_blinking_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1011111000000000
@@ -1529,26 +1529,18 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000111101000100
-.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[2] I2=controlFSM.state[0] I3=controlFSM.state[1] O=controlFSM.store_SB_LUT4_O_I0
+.gate SB_LUT4 I0=$false I1=controlFSM.store_SB_LUT4_O_I0 I2=lCHECK.validUCLength_SB_LUT4_I3_I1 I3=lCHECK.validUCLength_SB_LUT4_I0_I1 O=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 0000000000111111
+.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[0] I2=controlFSM.state[1] I3=controlFSM.state[2] O=controlFSM.store_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=$false I2=led3_SB_LUT4_O_I1 I3=controlFSM.state[3] O=controlFSM.store_SB_LUT4_O_I3
+.gate SB_LUT4 I0=$false I1=controlFSM.state[1] I2=controlFSM.state[0] I3=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 O=controlFSM.store_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000000000
-.gate SB_DFF C=hwclk D=controlFSM.state[1] Q=controlFSM.testLED2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:135.16-159.6|controller.v:327.3-335.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
-.gate SB_DFF C=hwclk D=controlFSM.state[2] Q=controlFSM.testLED3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:135.16-159.6|controller.v:327.3-335.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
-.gate SB_DFF C=hwclk D=controlFSM.state[3] Q=controlFSM.testLED4
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:135.16-159.6|controller.v:327.3-335.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
-.gate SB_DFF C=hwclk D=controlFSM.state[0] Q=controlFSM.testLED
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:135.16-159.6|controller.v:327.3-335.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 0011000000000000
 .gate SB_LUT4 I0=$false I1=$false I2=$false I3=keypad_r1_SB_LUT4_O_I3 O=keypad_r1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
@@ -1582,9 +1574,13 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 1111000011111111
-.gate SB_DFFN C=hwclk D=button_press.counter_SB_LUT4_I3_O Q=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2
+.gate SB_DFFN C=hwclk D=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2_SB_DFFN_Q_D Q=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:56.16-66.6|Button_Code.v:78.5-88.8|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.gate SB_LUT4 I0=$false I1=$false I2=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2 I3=button_press.counter[0] O=keypad_r3_SB_DFFNE_Q_E_SB_LUT4_O_I2_SB_DFFN_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 0000111111111111
 .gate SB_CARRY CI=lCHECK.count[0] CO=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[2] I0=$false I1=lCHECK.count[1]
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[9] CO=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[10] I0=$false I1=lCHECK.count[9]
@@ -1658,7 +1654,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[21] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[21] O=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[18] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[19] I0=$false I1=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[21] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[21] O=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1669,7 +1667,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[20] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[20] O=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[17] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[18] I0=$false I1=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[20] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[20] O=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1680,7 +1680,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[19] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[19] O=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[16] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[17] I0=$false I1=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[19] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[19] O=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1691,7 +1693,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[18] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[18] O=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[15] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[16] I0=$false I1=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[18] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[18] O=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1702,7 +1706,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[17] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[17] O=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[14] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[15] I0=$false I1=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[17] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[17] O=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1713,7 +1719,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[16] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[16] O=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[13] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[14] I0=$false I1=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[16] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[16] O=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1724,7 +1732,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[15] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[15] O=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[12] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[13] I0=$false I1=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[15] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[15] O=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1735,7 +1745,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[14] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[14] O=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[11] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[12] I0=$false I1=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[14] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[14] O=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1746,22 +1758,32 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[13] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[13] O=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[10] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[11] I0=$false I1=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[13] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[13] O=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
 .gate SB_DFFN C=button_press.bstateReg D=lCHECK.count_SB_DFFN_Q_19_D Q=lCHECK.count[12]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:43.3-101.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O O=lCHECK.count_SB_DFFN_Q_19_D
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=lCHECK.count_SB_DFFN_Q_19_D_SB_LUT4_O_I3 O=lCHECK.count_SB_DFFN_Q_19_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[9] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[10] I0=$false I1=lCHECK.count_SB_DFFN_Q_19_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[12] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[12] O=lCHECK.count_SB_DFFN_Q_19_D_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1010110010001111
 .gate SB_LUT4 I0=$false I1=$false I2=$false I3=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3 O=lCHECK.count_SB_DFFN_Q_1_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[30] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[30] O=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[27] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[28] I0=$false I1=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[30] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[30] O=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1775,7 +1797,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[11] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[11] O=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[8] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[9] I0=$false I1=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[11] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[11] O=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1786,17 +1810,25 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[10] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[10] O=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[7] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[8] I0=$false I1=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[10] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[10] O=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
 .gate SB_DFFN C=button_press.bstateReg D=lCHECK.count_SB_DFFN_Q_22_D Q=lCHECK.count[9]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:43.3-101.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_O O=lCHECK.count_SB_DFFN_Q_22_D
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=lCHECK.count_SB_DFFN_Q_22_D_SB_LUT4_O_I3 O=lCHECK.count_SB_DFFN_Q_22_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[6] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[7] I0=$false I1=lCHECK.count_SB_DFFN_Q_22_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[9] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[9] O=lCHECK.count_SB_DFFN_Q_22_D_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1010110010001111
 .gate SB_DFFN C=button_press.bstateReg D=lCHECK.count_SB_DFFN_Q_23_D Q=lCHECK.count[8]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:43.3-101.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
@@ -1804,7 +1836,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[8] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[8] O=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[5] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[6] I0=$false I1=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[8] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[8] O=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1815,7 +1849,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[7] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[7] O=lCHECK.count_SB_DFFN_Q_24_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[4] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[5] I0=$false I1=lCHECK.count_SB_DFFN_Q_24_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[7] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[7] O=lCHECK.count_SB_DFFN_Q_24_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1826,7 +1862,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[6] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[6] O=lCHECK.count_SB_DFFN_Q_25_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[3] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[4] I0=$false I1=lCHECK.count_SB_DFFN_Q_25_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[6] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[6] O=lCHECK.count_SB_DFFN_Q_25_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1837,7 +1875,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[5] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[5] O=lCHECK.count_SB_DFFN_Q_26_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[2] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[3] I0=$false I1=lCHECK.count_SB_DFFN_Q_26_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[5] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[5] O=lCHECK.count_SB_DFFN_Q_26_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1848,7 +1888,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[4] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[4] O=lCHECK.count_SB_DFFN_Q_27_D_SB_LUT4_O_I3
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[4] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[4] O=lCHECK.count_SB_DFFN_Q_27_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1859,7 +1899,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[3] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[3] O=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[2] I0=$false I1=lCHECK.count_SB_DFFN_Q_27_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[3] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[3] O=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1896,7 +1938,7 @@
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[17] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[18] I0=$false I1=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[7] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[8] I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_O
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[7] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[8] I0=$false I1=lCHECK.count_SB_DFFN_Q_22_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[16] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[17] I0=$false I1=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
@@ -1910,7 +1952,7 @@
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[11] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[12] I0=$false I1=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[10] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[11] I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[10] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[11] I0=$false I1=lCHECK.count_SB_DFFN_Q_19_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[6] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[7] I0=$false I1=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
@@ -1926,7 +1968,7 @@
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[27] CO=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[28] I0=$false I1=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[2] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[2] O=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[2] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[2] O=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1934,7 +1976,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[29] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[29] O=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[26] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[27] I0=$false I1=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[29] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[29] O=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1944,11 +1988,11 @@
 .gate SB_DFFN C=button_press.bstateReg D=lCHECK.count_SB_DFFN_Q_30_D Q=lCHECK.count[1]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:43.3-101.6|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_30_D I3=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3 O=lCHECK.count_SB_DFFN_Q_30_D_SB_LUT4_I2_O
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_30_D I2=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3 O=lCHECK.count_SB_DFFN_Q_30_D_SB_LUT4_I1_O
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0011000000000000
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[1] I3=lCHECK.count[0] O=lCHECK.count_SB_DFFN_Q_30_D
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000000000000
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[1] I3=lCHECK.count[0] O=lCHECK.count_SB_DFFN_Q_30_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0101001101110000
@@ -1963,7 +2007,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I3=lCHECK.count[0] O=lCHECK.count_SB_DFFN_Q_31_D
+.gate SB_LUT4 I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I3=lCHECK.count[0] O=lCHECK.count_SB_DFFN_Q_31_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0011001100001111
@@ -1971,7 +2015,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[28] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[28] O=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[25] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[26] I0=$false I1=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[28] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[28] O=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1982,7 +2028,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[27] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[27] O=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[24] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[25] I0=$false I1=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[27] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[27] O=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -1993,7 +2041,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[26] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[26] O=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[23] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[24] I0=$false I1=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[26] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[26] O=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2004,7 +2054,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[25] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[25] O=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[22] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[23] I0=$false I1=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[25] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[25] O=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2015,7 +2067,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[24] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[24] O=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[21] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[22] I0=$false I1=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[24] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[24] O=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2026,7 +2080,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[23] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[23] O=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[20] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[21] I0=$false I1=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[23] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[23] O=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2037,7 +2093,9 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[22] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[22] O=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[19] CO=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[20] I0=$false I1=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3
+.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[22] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[22] O=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2045,7 +2103,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
 .param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O I2=lCHECK.count[31] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[31] O=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I2=lCHECK.count[31] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[31] O=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1010110010001111
@@ -2077,117 +2135,23 @@
 .gate SB_LUT4 I0=$false I1=$false I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_I3 I1=lCHECK.count[9] I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_I2 I3=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_I3
+.param LUT_INIT 0000000000001111
+.gate SB_LUT4 I0=lCHECK.state[0] I1=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 I2=lCHECK.state[1] I3=lCHECK.state[2] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000110000001010
-.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.count[9] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[9] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0110100110010110
-.gate SB_LUT4 I0=lCHECK.count[9] I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000001101
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[6] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[7] I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_O
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_I3 I1=lCHECK.count[12] I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_I2 I3=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000110000001010
-.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.count[12] I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3[12] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:89.19-97.6|lengthchecker.v:65|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4|/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0110100110010110
-.gate SB_LUT4 I0=lCHECK.count[12] I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000001101
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[9] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[10] I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[8] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[9] I0=$false I1=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[7] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[8] I0=$false I1=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[23] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[24] I0=$false I1=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[22] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[23] I0=$false I1=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[21] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[22] I0=$false I1=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[20] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[21] I0=$false I1=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[2] I0=$false I1=lCHECK.count_SB_DFFN_Q_27_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[19] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[20] I0=$false I1=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[18] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[19] I0=$false I1=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[17] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[18] I0=$false I1=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[16] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[17] I0=$false I1=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[15] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[16] I0=$false I1=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[5] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[6] I0=$false I1=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[14] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[15] I0=$false I1=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[13] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[14] I0=$false I1=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[12] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[13] I0=$false I1=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[11] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[12] I0=$false I1=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[10] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[11] I0=$false I1=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[4] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[5] I0=$false I1=lCHECK.count_SB_DFFN_Q_24_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[3] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[4] I0=$false I1=lCHECK.count_SB_DFFN_Q_25_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[2] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[3] I0=$false I1=lCHECK.count_SB_DFFN_Q_26_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[27] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[28] I0=$false I1=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[26] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[27] I0=$false I1=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[25] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[26] I0=$false I1=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[24] CO=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[25] I0=$false I1=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3
-.attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_LUT4 I0=$false I1=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_I2 I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0000000011111100
-.gate SB_LUT4 I0=lCHECK.state[0] I1=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 I2=lCHECK.state[1] I3=lCHECK.state[2] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111101011001111
+.param LUT_INIT 0000000100110000
 .gate SB_LUT4 I0=$false I1=lCHECK.state[1] I2=lCHECK.state[0] I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0011000000000000
-.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000111100000000
-.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_D_SB_LUT4_O_I0 I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I3_I2 I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O I3=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I3 O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_1_O
+.gate SB_LUT4 I0=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I0 I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_I3 I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O I3=lCHECK.state[2] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_O
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000110100000000
-.gate SB_LUT4 I0=controlFSM.prevbstate_SB_LUT4_I3_1_I2 I1=controlFSM.read_input I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I3_SB_LUT4_O_I2 I3=lCHECK.state[2] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I3
+.param LUT_INIT 0000110000000101
+.gate SB_LUT4 I0=controlFSM.read_input I1=controlFSM.prevbstate_SB_LUT4_I3_1_I2 I2=lCHECK.state[0] I3=lCHECK.state[1] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111000010001111
-.gate SB_LUT4 I0=$false I1=$false I2=lCHECK.state[1] I3=lCHECK.state[0] O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I3_O_SB_LUT4_I2_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000000000001111
+.param LUT_INIT 0000000000000111
 .gate SB_LUT4 I0=$false I1=controlFSM.prevbstate_SB_LUT4_I3_1_I2 I2=button_press.buttonReg[0] I3=controlFSM.read_input O=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
@@ -2220,31 +2184,31 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 1100000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1
+.gate SB_LUT4 I0=$false I1=lCHECK.count_SB_DFFN_Q_2_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_1_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100000000000000
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_3_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_6_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_5_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_4_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_7_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_10_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_8_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3
+.gate SB_LUT4 I0=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0 I1=lCHECK.count_SB_DFFN_Q_30_D_SB_LUT4_I1_O I2=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0 I1=lCHECK.count_SB_DFFN_Q_30_D_SB_LUT4_I2_O I2=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_22_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_19_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_23_D_SB_LUT4_O_I3 I2=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_1_O_SB_LUT4_I2_O I3=lCHECK.count_SB_DFFN_Q_21_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_11_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_14_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_13_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_12_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_20_D_SB_LUT4_O_I3 I1=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O I2=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3
+.gate SB_LUT4 I0=lCHECK.count_SB_DFFN_Q_18_D_SB_LUT4_O_I3 I1=lCHECK.count_SB_DFFN_Q_17_D_SB_LUT4_O_I3 I2=lCHECK.count_SB_DFFN_Q_16_D_SB_LUT4_O_I3 I3=lCHECK.count_SB_DFFN_Q_15_D_SB_LUT4_O_I3 O=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
@@ -2254,9 +2218,17 @@
 .param LUT_INIT 0000111100000000
 .gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[29] CO=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I2 I0=$false I1=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_CARRY CI=lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[28] CO=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 I0=$false I1=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3
+.gate SB_CARRY CI=lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[28] CO=lCHECK.validUCLength_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 I0=$false I1=lCHECK.count_SB_DFFN_Q_D_SB_LUT4_O_I3
 .attr src "top.v:89.19-97.6|lengthchecker.v:99|/usr/local/bin/../share/yosys/ice40/arith_map.v:54.5-62.4"
-.gate SB_LUT4 I0=$false I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=led3_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=lCHECK.validUCLength O=controlFSM.nextstate_SB_LUT4_O_2_I2
+.gate SB_LUT4 I0=lCHECK.validUCLength I1=lCHECK.validUCLength_SB_LUT4_I0_I1 I2=controlFSM.nextstate_SB_LUT4_O_I1 I3=led3_SB_LUT4_O_I3_SB_LUT4_O_I2 O=controlFSM.nextstate_SB_LUT4_O_2_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000101110111011
+.gate SB_LUT4 I0=$false I1=controlFSM.prevbstate_SB_LUT4_I3_1_O I2=led2_SB_LUT4_O_I3_SB_LUT4_O_I3 I3=button_press.buttonReg[0] O=lCHECK.validUCLength_SB_LUT4_I0_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100000000000000
+.gate SB_LUT4 I0=$false I1=lCHECK.validUCLength_SB_LUT4_I3_I1 I2=led3_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=lCHECK.validUCLength O=controlFSM.nextstate_SB_LUT4_O_3_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 1100000000000000
@@ -2264,10 +2236,10 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000111111110000
-.gate SB_LUT4 I0=led3_SB_LUT4_I0_I3 I1=led3_SB_LUT4_O_I2_SB_LUT4_O_I2 I2=led1_SB_LUT4_O_I2 I3=controlFSM.prevbstate_SB_LUT4_I3_O O=controlFSM.nextstate_SB_LUT4_O_1_I2_SB_LUT4_O_I3
+.gate SB_LUT4 I0=$false I1=led3_SB_LUT4_I0_I3 I2=led1_SB_LUT4_O_I2 I3=controlFSM.prevbstate_SB_LUT4_I3_O O=controlFSM.nextstate_SB_LUT4_O_I2_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000111111111
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1111110000000000
 .gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 I3=controlFSM.state[1] O=led1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
@@ -2292,7 +2264,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000000000001111
-.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[2] I2=controlFSM.state[0] I3=controlFSM.state[1] O=led2_SB_LUT4_O_I3_SB_LUT4_O_I2
+.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[2] I2=controlFSM.state[1] I3=controlFSM.state[0] O=led2_SB_LUT4_O_I3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0001000000000000
@@ -2300,413 +2272,389 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000100000000
-.gate SB_LUT4 I0=led3 I1=led2_SB_LUT4_O_I1 I2=led3_SB_LUT4_I0_I2 I3=led3_SB_LUT4_I0_I3 O=led3_SB_LUT4_O_I3
+.gate SB_LUT4 I0=led3 I1=led2_SB_LUT4_O_I1 I2=led3_SB_LUT4_I0_I2 I3=led3_SB_LUT4_I0_I3 O=led3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000001101
-.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[2] I2=controlFSM.state[0] I3=controlFSM.state[1] O=led3_SB_LUT4_I0_I2
+.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[0] I2=controlFSM.state[2] I3=controlFSM.state[1] O=led3_SB_LUT4_I0_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000100000000
-.gate SB_LUT4 I0=$false I1=controlFSM.state[3] I2=controlFSM.state[2] I3=controlFSM.state[1] O=led3_SB_LUT4_I0_I3
+.gate SB_LUT4 I0=$false I1=controlFSM.state[3] I2=controlFSM.state[1] I3=controlFSM.state[2] O=led3_SB_LUT4_I0_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
 .param LUT_INIT 0011000000000000
-.gate SB_LUT4 I0=blinks.clk_led I1=led3_SB_LUT4_O_I1 I2=led3_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I3 O=led3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111111111111
-.gate SB_LUT4 I0=blinks.done I1=led3_SB_LUT4_O_I1 I2=led3_SB_LUT4_I0_I2 I3=led3_SB_LUT4_O_I1_SB_LUT4_I1_I3 O=controlFSM.nextstate_SB_LUT4_O_1_I3_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0000000000001011
-.gate SB_LUT4 I0=blinks.done I1=controlFSM.state[0] I2=controlFSM.state[1] I3=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 O=led3_SB_LUT4_O_I1_SB_LUT4_I1_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000000000000
-.gate SB_LUT4 I0=$false I1=controlFSM.state[2] I2=controlFSM.state[1] I3=controlFSM.state[0] O=led3_SB_LUT4_O_I1
+.gate SB_LUT4 I0=$false I1=led3_SB_LUT4_O_I1 I2=led3_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I3 O=led3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0000001100000000
-.gate SB_LUT4 I0=$false I1=$false I2=led3_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I2_SB_LUT4_O_I3 O=led3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 0000000000001111
-.gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=controlFSM.state[1] I3=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 O=led3_SB_LUT4_O_I2_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 0000001100000000
-.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[1] I2=controlFSM.state[0] I3=controlFSM.state[2] O=led3_SB_LUT4_O_I2_SB_LUT4_O_I3
+.param LUT_INIT 1100111111111111
+.gate SB_LUT4 I0=controlFSM.state[1] I1=controlFSM.state[2] I2=controlFSM.state[0] I3=blinks.clk_led O=led3_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0001000000000000
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC1[3] Q=vCHECK.correctUC[23]
+.gate SB_LUT4 I0=$false I1=$false I2=led3_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=led3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=led3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC1[2] Q=vCHECK.correctUC[22]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 0000000000001111
+.gate SB_LUT4 I0=$false I1=controlFSM.state[0] I2=controlFSM.state[1] I3=led2_SB_LUT4_O_I2_SB_LUT4_O_I0 O=led3_SB_LUT4_O_I3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC4[0] Q=vCHECK.correctUC[8]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 0000001100000000
+.gate SB_LUT4 I0=controlFSM.state[3] I1=controlFSM.state[1] I2=controlFSM.state[0] I3=controlFSM.state[2] O=led3_SB_LUT4_O_I3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC5[3] Q=vCHECK.correctUC[7]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0001000000000000
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC6[0] Q=led5
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC5[1] Q=vCHECK.correctUC[5]
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=led5 I1=led5_SB_LUT4_I0_I1 I2=vCHECK.correctUC[15] I3=led5_SB_LUT4_I0_I3 O=led5_SB_LUT4_I0_O
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC6[3] Q=vCHECK.correctUC[3]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1001000000001001
+.gate SB_LUT4 I0=$false I1=vCHECK.prev6[0] I2=button_press.buttonReg[0] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=led5_SB_LUT4_I0_I1
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC6[0] Q=vCHECK.correctUC[0]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1111000011001100
+.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev4[3] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev3[3] O=led5_SB_LUT4_I0_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC1[1] Q=vCHECK.correctUC[21]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111110001000
+.gate SB_LUT4 I0=$false I1=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1 I2=led5_SB_LUT4_I0_O I3=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3 O=led5_SB_LUT4_I0_O_SB_LUT4_I2_O
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC2[3] Q=vCHECK.correctUC[19]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100000000000000
+.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_3_D I1=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I1 I2=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I2 I3=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3 O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC2[2] Q=vCHECK.correctUC[18]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0111000000000000
+.gate SB_DFF C=controlFSM.store D=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I1_SB_DFF_Q_D Q=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC2[0] Q=vCHECK.correctUC[16]
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC1[0] O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I1_SB_DFF_Q_D
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC3[3] Q=vCHECK.correctUC[15]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I1 I1=vCHECK.prev1_SB_DFFN_Q_3_D I2=vCHECK.prev2_SB_DFFN_Q_D I3=vCHECK.correctUC[19] O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC3[2] Q=vCHECK.correctUC[14]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1110000011101110
+.gate SB_LUT4 I0=vCHECK.correctUC[16] I1=vCHECK.prev2_SB_DFFN_Q_3_D I2=vCHECK.correctUC[23] I3=vCHECK.prev1_SB_DFFN_Q_D O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC4[3] Q=vCHECK.correctUC[11]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1011000000001011
+.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_1_D I1=vCHECK.correctUC[14] I2=vCHECK.prev2_SB_DFFN_Q_2_D I3=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3_SB_LUT4_O_I3 O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=controlFSM.store D=vCHECK.prevUC4[1] Q=vCHECK.correctUC[9]
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000100110010000
+.gate SB_DFF C=controlFSM.store D=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFF_Q_D Q=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC2[1] O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=$false I1=$false I2=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2 I3=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I3 O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 1111000000000000
+.gate SB_LUT4 I0=vCHECK.prev5_SB_DFFN_Q_D I1=vCHECK.correctUC[7] I2=vCHECK.prev5_SB_DFFN_Q_1_D I3=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2_SB_LUT4_O_I3 O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000101110111011
+.gate SB_DFF C=controlFSM.store D=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFF_Q_D Q=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC5[2] O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=vCHECK.correctUC[19] I1=vCHECK.prev2_SB_DFFN_Q_D I2=vCHECK.prev2_SB_DFFN_Q_1_D I3=vCHECK.correctUC[18] O=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1011000010111011
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=led6_SB_LUT4_O_I3 O=led6
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_DFF C=controlFSM.store D=led6_SB_LUT4_O_I3_SB_DFF_Q_D Q=led6_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC6[1] O=led6_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_1_D I1=vCHECK.correctUC[22] I2=vCHECK.prev6_SB_DFFN_Q_2_D I3=led6_SB_LUT4_O_I3 O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000100110010000
+.gate SB_LUT4 I0=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0 I1=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I1 I2=led6_SB_LUT4_O_I3_SB_LUT4_I3_O I3=compareType[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000000000000000
+.gate SB_LUT4 I0=$false I1=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I1 I2=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2 I3=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I3 O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100000000000000
+.gate SB_LUT4 I0=led5_SB_LUT4_I0_O_SB_LUT4_I2_I3_SB_LUT4_O_I2_SB_LUT4_O_I3 I1=vCHECK.prev5_SB_DFFN_Q_1_D I2=vCHECK.prev5_SB_DFFN_Q_2_D I3=vCHECK.correctUC[5] O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1110000011101110
+.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_1_D I1=vCHECK.prev3_SB_DFFN_Q_3_D I2=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0001010000101000
+.gate SB_DFF C=controlFSM.store D=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_DFF_Q_D Q=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC3[0] O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_DFF C=controlFSM.store D=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFF_Q_D Q=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC4[2] O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_2_D I1=vCHECK.correctUC[9] I2=vCHECK.prev4_SB_DFFN_Q_D I3=vCHECK.correctUC[11] O=led6_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_I2_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1001000000001001
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=led7_SB_LUT4_O_I3 O=led7
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_DFF C=controlFSM.store D=led7_SB_LUT4_O_I3_SB_DFF_Q_D Q=led7_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC6[2] O=led7_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC6[3] Q=led8
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=led8_SB_LUT4_I3_I2 I3=led8 O=led8_SB_LUT4_I3_O
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 1111000000001111
+.gate SB_LUT4 I0=$false I1=vCHECK.prev6[3] I2=button_press.buttonReg[3] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=led8_SB_LUT4_I3_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1111000011001100
+.gate SB_LUT4 I0=vCHECK.prev6_SB_DFFN_Q_1_D I1=led7_SB_LUT4_O_I3 I2=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2 I3=led8_SB_LUT4_I3_O O=led8_SB_LUT4_I3_O_SB_LUT4_I3_O
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0110000000000000
+.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_2_D I1=vCHECK.prev1_SB_DFFN_Q_2_D I2=vCHECK.correctUC[21] I3=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_I3 O=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000110000010
+.gate SB_DFF C=controlFSM.store D=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_I3_SB_DFF_Q_D Q=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC3[1] O=led8_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_I3_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0 I1=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I1 I2=led8_SB_LUT4_I3_O_SB_LUT4_I3_O I3=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000000000000000
+.gate SB_LUT4 I0=vCHECK.correctUC[5] I1=vCHECK.prev5_SB_DFFN_Q_2_D I2=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2 I3=vCHECK.prev5_SB_DFFN_Q_3_D O=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0000101110110000
+.gate SB_DFF C=controlFSM.store D=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_DFF_Q_D Q=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC5[0] O=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I0_SB_LUT4_O_I2_SB_DFF_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
+.param LUT_INIT 0000000011111111
+.gate SB_LUT4 I0=vCHECK.correctUC[18] I1=vCHECK.prev2_SB_DFFN_Q_1_D I2=vCHECK.correctUC[8] I3=vCHECK.prev4_SB_DFFN_Q_3_D O=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I1
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1011000000001011
+.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_3_D I1=vCHECK.correctUC[16] I2=vCHECK.correctUC[7] I3=vCHECK.prev5_SB_DFFN_Q_D O=led8_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1011000010111011
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC1[3] Q=vCHECK.correctUC[23]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC1[2] Q=vCHECK.correctUC[22]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC4[0] Q=vCHECK.correctUC[8]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC5[3] Q=vCHECK.correctUC[7]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC5[1] Q=vCHECK.correctUC[5]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC1[1] Q=vCHECK.correctUC[21]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC2[3] Q=vCHECK.correctUC[19]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC2[2] Q=vCHECK.correctUC[18]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC2[0] Q=vCHECK.correctUC[16]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC3[3] Q=vCHECK.correctUC[15]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC3[2] Q=vCHECK.correctUC[14]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC4[3] Q=vCHECK.correctUC[11]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
+.gate SB_DFF C=controlFSM.store D=vCHECK.prevUC4[1] Q=vCHECK.correctUC[9]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:2.51-2.90"
 .gate SB_DFFN C=button_press.bstateReg D=vCHECK.correct_SB_DFFN_Q_D Q=vCHECK.correct
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
 .gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111100011111111
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0
+.param LUT_INIT 1000111111111111
+.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=vCHECK.prevUC6[3] I1=vCHECK.led4_SB_LUT4_I1_1_O I2=vCHECK.prevUC2[1] I3=vCHECK.prev2_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000000001011
-.gate SB_LUT4 I0=vCHECK.prevUC2[3] I1=vCHECK.prev2_SB_DFFN_Q_D I2=vCHECK.prevUC6[0] I3=vCHECK.led1_SB_LUT4_I1_1_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000010111011
-.gate SB_LUT4 I0=vCHECK.led4_SB_LUT4_I1_O I1=vCHECK.prevUC5[3] I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 1111000000000000
+.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_1_D I1=vCHECK.prevUC3[2] I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000000000
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_3_D I1=vCHECK.prevUC2[0] I2=vCHECK.led3_SB_LUT4_I1_O I3=vCHECK.prevUC5[2] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.prev1_SB_DFFN_Q_2_D I2=vCHECK.prevUC1[1] I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000010111011
-.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_1_D I1=vCHECK.prevUC1[2] I2=vCHECK.prevUC5[0] I3=vCHECK.led1_SB_LUT4_I1_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3
+.param LUT_INIT 0100000100000000
+.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.prev2_SB_DFFN_Q_2_D I3=vCHECK.prevUC2[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_I3_O I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=$false I1=vCHECK.prev1_SB_DFFN_Q_D I2=vCHECK.prevUC1[3] I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I1
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
+.param LUT_INIT 0000111111110000
+.gate SB_LUT4 I0=$false I1=vCHECK.prevUC1[3] I2=vCHECK.prev1_SB_DFFN_Q_D I3=compareType[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1100001100000000
-.gate SB_LUT4 I0=vCHECK.led3_SB_LUT4_I2_O I1=vCHECK.prevUC6[2] I2=vCHECK.prev1_SB_DFFN_Q_3_D I3=vCHECK.prevUC1[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I3
+.param LUT_INIT 1100111100000000
+.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_2_D I1=vCHECK.prevUC3[1] I2=vCHECK.prev2_SB_DFFN_Q_1_D I3=vCHECK.prevUC2[2] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.prevUC4[2] I1=vCHECK.prev4_SB_DFFN_Q_1_D I2=compareType[1] I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2
+.gate SB_LUT4 I0=vCHECK.prev6_SB_DFFN_Q_1_D I1=vCHECK.prevUC6[2] I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000000000
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.led2_SB_LUT4_I2_O I3=vCHECK.prevUC6[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3
+.gate SB_LUT4 I0=led8_SB_LUT4_I3_I2 I1=vCHECK.prevUC6[3] I2=vCHECK.prevUC5[0] I3=vCHECK.prev5_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000001111
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1001000000001001
+.gate SB_LUT4 I0=vCHECK.prev6_SB_DFFN_Q_2_D I1=vCHECK.prevUC6[1] I2=vCHECK.prev4_SB_DFFN_Q_3_D I3=vCHECK.prevUC4[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1001000000001001
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=vCHECK.prevUC4[1] I1=vCHECK.prev4_SB_DFFN_Q_2_D I2=vCHECK.prevUC3[2] I3=vCHECK.prev3_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I0
+.gate SB_LUT4 I0=vCHECK.prevUC5[2] I1=vCHECK.prev5_SB_DFFN_Q_1_D I2=vCHECK.prevUC5[3] I3=vCHECK.prev5_SB_DFFN_Q_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_1_D I1=vCHECK.prevUC2[2] I2=vCHECK.prevUC5[1] I3=vCHECK.led2_SB_LUT4_I1_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I1
+.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_1_D I1=vCHECK.prevUC1[2] I2=vCHECK.prevUC4[1] I3=vCHECK.prev4_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1011000000001011
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_D I1=vCHECK.prevUC2[3] I2=vCHECK.prevUC1[1] I3=vCHECK.prev1_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000000001011
-.gate SB_LUT4 I0=vCHECK.prevUC3[1] I1=vCHECK.prev3_SB_DFFN_Q_2_D I2=vCHECK.prevUC3[3] I3=vCHECK.prev3_SB_DFFN_Q_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.prevUC5[2] I1=vCHECK.led3_SB_LUT4_I1_O I2=vCHECK.prevUC3[0] I3=vCHECK.prev3_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000000001011
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1 I2=compareType[1] I3=compareType[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1111100000000000
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1 I2=vCHECK.prev1_SB_DFFN_Q_3_D I3=vCHECK.led3_SB_LUT4_I2_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0001010000101000
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC6[2] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC1[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I0_SB_LUT4_O_I1_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=vCHECK.correctUC[3] I1=vCHECK.led4_SB_LUT4_I1_1_O I2=vCHECK.correctUC[23] I3=vCHECK.prev1_SB_DFFN_Q_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_1_D I1=vCHECK.correctUC[14] I2=vCHECK.prev2_SB_DFFN_Q_3_D I3=vCHECK.correctUC[16] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.correctUC[19] I1=vCHECK.prev2_SB_DFFN_Q_D I2=vCHECK.prev2_SB_DFFN_Q_1_D I3=vCHECK.correctUC[18] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I1
+.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_3_D I1=vCHECK.prevUC3[0] I2=vCHECK.prev4_SB_DFFN_Q_D I3=vCHECK.prevUC4[3] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1011000010111011
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_2_D I1=vCHECK.prev3_SB_DFFN_Q_D I2=vCHECK.correctUC[15] I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2
+.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_D I1=vCHECK.prevUC1[3] I2=vCHECK.prevUC1[2] I3=vCHECK.prev1_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000110000010
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC2[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_1_D I1=vCHECK.led3_SB_LUT4_I1_O I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0001010000101000
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC5[2] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC4[2] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=vCHECK.led2_SB_LUT4_I2_O I1=vCHECK.prev4_SB_DFFN_Q_D I2=vCHECK.correctUC[11] I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000110000010
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC6[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=vCHECK.prev1_SB_DFFN_Q_2_D I1=vCHECK.correctUC[21] I2=vCHECK.prev1_SB_DFFN_Q_1_D I3=vCHECK.correctUC[22] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
+.param LUT_INIT 1011000010111011
+.gate SB_LUT4 I0=vCHECK.prevUC1[0] I1=vCHECK.prev1_SB_DFFN_Q_3_D I2=led5_SB_LUT4_I0_I1 I3=vCHECK.prevUC6[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.led1_SB_LUT4_I1_1_O I1=vCHECK.correctUC[0] I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1
+.gate SB_LUT4 I0=vCHECK.prevUC4[3] I1=vCHECK.prev4_SB_DFFN_Q_D I2=vCHECK.prevUC5[1] I3=vCHECK.prev5_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1011000000001011
+.gate SB_LUT4 I0=vCHECK.prevUC4[2] I1=vCHECK.prev4_SB_DFFN_Q_1_D I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000000000
-.gate SB_LUT4 I0=vCHECK.prev3_SB_DFFN_Q_2_D I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2
+.gate SB_LUT4 I0=vCHECK.prevUC3[0] I1=vCHECK.prev3_SB_DFFN_Q_3_D I2=led5_SB_LUT4_I0_I3 I3=vCHECK.prevUC3[3] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0110000000000000
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC3[1] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_2_D I1=vCHECK.correctUC[9] I2=vCHECK.correctUC[8] I3=vCHECK.prev4_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I2
+.param LUT_INIT 1011000000001011
+.gate SB_LUT4 I0=vCHECK.prevUC2[0] I1=vCHECK.prev2_SB_DFFN_Q_3_D I2=vCHECK.prevUC2[3] I3=vCHECK.prev2_SB_DFFN_Q_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_D I1=vCHECK.correctUC[19] I2=vCHECK.correctUC[18] I3=vCHECK.prev2_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000010111011
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
-.param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=vCHECK.led2_SB_LUT4_I1_O I1=vCHECK.correctUC[5] I2=vCHECK.led4_SB_LUT4_I1_O I3=vCHECK.correctUC[7] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000001001
-.gate SB_LUT4 I0=vCHECK.led1_SB_LUT4_I1_O I1=vCHECK.prev3_SB_DFFN_Q_3_D I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0001010000101000
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC3[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_DFFN C=controlFSM.store D=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFFN_Q_D Q=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:127.2-141.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=$false I1=$false I2=$false I3=vCHECK.prevUC5[0] O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_DFFN_Q_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:41.34-42.52"
-.param LUT_INIT 0000000011111111
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1 I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000001111111
-.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_D I1=vCHECK.prev1_SB_DFFN_Q_3_D I2=vCHECK.prev1_SB_DFFN_Q_D I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0
+.gate SB_LUT4 I0=vCHECK.prev2_SB_DFFN_Q_D I1=vCHECK.prev1_SB_DFFN_Q_3_D I2=vCHECK.prev1_SB_DFFN_Q_D I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000100000000
-.gate SB_LUT4 I0=vCHECK.led4_SB_LUT4_I1_O I1=vCHECK.prev4_SB_DFFN_Q_3_D I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3
+.gate SB_LUT4 I0=vCHECK.prev5_SB_DFFN_Q_D I1=vCHECK.prev4_SB_DFFN_Q_3_D I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0001000000000000
-.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_D I1=vCHECK.prev3_SB_DFFN_Q_3_D I2=vCHECK.prev3_SB_DFFN_Q_D I3=vCHECK.prev2_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2
+.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_D I1=vCHECK.prev3_SB_DFFN_Q_3_D I2=led5_SB_LUT4_I0_I3 I3=vCHECK.prev2_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I2
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 0000000000000001
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.led4_SB_LUT4_I1_1_O I3=vCHECK.led1_SB_LUT4_I1_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
+.gate SB_LUT4 I0=$false I1=$false I2=led8_SB_LUT4_I3_I2 I3=vCHECK.prev5_SB_DFFN_Q_3_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_O_I3_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000000000001111
-.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I0 I1=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I1 I2=vCHECK.prev2_SB_DFFN_Q_1_D I3=vCHECK.led2_SB_LUT4_I2_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000000000000000
-.gate SB_LUT4 I0=compareType[0] I1=vCHECK.prev3_SB_DFFN_Q_2_D I2=vCHECK.prev3_SB_DFFN_Q_1_D I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I0
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000000000000
-.gate SB_LUT4 I0=compareType[1] I1=vCHECK.prev4_SB_DFFN_Q_2_D I2=vCHECK.prev2_SB_DFFN_Q_2_D I3=vCHECK.prev4_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I0_SB_LUT4_O_I3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000000000000
-.gate SB_LUT4 I0=vCHECK.led1_SB_LUT4_I1_1_O I1=vCHECK.led2_SB_LUT4_I1_O I2=vCHECK.led3_SB_LUT4_I1_O I3=vCHECK.led3_SB_LUT4_I2_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I1_SB_LUT4_O_I1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0100000000000000
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.prev1_SB_DFFN_Q_2_D I3=vCHECK.prev1_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I2
+.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2 I3=vCHECK.prev6_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 1111000000000000
-.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.correct O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I3
+.gate SB_LUT4 I0=compareType[1] I1=vCHECK.prev3_SB_DFFN_Q_2_D I2=vCHECK.prev3_SB_DFFN_Q_1_D I3=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3 O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000000000000
+.gate SB_LUT4 I0=compareType[0] I1=vCHECK.prev4_SB_DFFN_Q_1_D I2=vCHECK.prev2_SB_DFFN_Q_2_D I3=vCHECK.prev4_SB_DFFN_Q_2_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_I2_SB_LUT4_O_I3
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000000000000
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0 I1=vCHECK.prev2_SB_DFFN_Q_1_D I2=vCHECK.prev1_SB_DFFN_Q_2_D I3=vCHECK.prev1_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000000000000000
+.gate SB_LUT4 I0=led5_SB_LUT4_I0_I1 I1=vCHECK.prev5_SB_DFFN_Q_2_D I2=vCHECK.prev5_SB_DFFN_Q_1_D I3=vCHECK.prev6_SB_DFFN_Q_1_D O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I0
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 0100000000000000
+.gate SB_LUT4 I0=$false I1=$false I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.correct O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:46.34-47.52"
 .param LUT_INIT 0000111100000000
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led1_SB_LUT4_I1_1_O Q=vCHECK.led1
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=vCHECK.led1 I1=button_press.buttonReg[0] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prevUC6[0] O=vCHECK.led1_SB_LUT4_I0_O
+.gate SB_LUT4 I0=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I0 I1=led5_SB_LUT4_I0_O_SB_LUT4_I2_O I2=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3_SB_LUT4_O_I2 I3=compareType_SB_LUT4_I2_O O=vCHECK.correct_SB_DFFN_Q_D_SB_LUT4_O_I3
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0011010100000000
-.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.led1 I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[0] O=vCHECK.led1_SB_LUT4_I1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111110001000
-.gate SB_LUT4 I0=$false I1=vCHECK.led1 I2=button_press.buttonReg[0] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.led1_SB_LUT4_I1_1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1111000011001100
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led2_SB_LUT4_I2_O Q=vCHECK.led2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.led2 I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[1] O=vCHECK.led2_SB_LUT4_I1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111110001000
-.gate SB_LUT4 I0=$false I1=button_press.buttonReg[1] I2=vCHECK.led2 I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.led2_SB_LUT4_I2_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1100110011110000
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led3_SB_LUT4_I2_O Q=vCHECK.led3
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.led3 I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[2] O=vCHECK.led3_SB_LUT4_I1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111110001000
-.gate SB_LUT4 I0=$false I1=button_press.buttonReg[2] I2=vCHECK.led3 I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.led3_SB_LUT4_I2_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1100110011110000
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led4_SB_LUT4_I1_1_O Q=vCHECK.led4
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_LUT4 I0=vCHECK.led4 I1=button_press.buttonReg[3] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prevUC6[3] O=vCHECK.led4_SB_LUT4_I0_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0011010100000000
-.gate SB_LUT4 I0=vCHECK.led4_SB_LUT4_I0_O I1=vCHECK.led1_SB_LUT4_I0_O I2=vCHECK.prev4_SB_DFFN_Q_D I3=vCHECK.prevUC4[3] O=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 0001000000000001
-.gate SB_LUT4 I0=vCHECK.prev4_SB_DFFN_Q_3_D I1=vCHECK.prevUC4[0] I2=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_I3_I2 I3=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O O=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_I3_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1001000000000000
-.gate SB_LUT4 I0=vCHECK.prevUC2[0] I1=vCHECK.prev2_SB_DFFN_Q_3_D I2=vCHECK.prevUC2[2] I3=vCHECK.prev2_SB_DFFN_Q_1_D O=vCHECK.led4_SB_LUT4_I0_O_SB_LUT4_I0_O_SB_LUT4_I3_I2
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1011000010111011
-.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.led4 I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[3] O=vCHECK.led4_SB_LUT4_I1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111110001000
-.gate SB_LUT4 I0=$false I1=vCHECK.led4 I2=button_press.buttonReg[3] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.led4_SB_LUT4_I1_1_O
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
-.param LUT_INIT 1111000011001100
+.param LUT_INIT 0000000001111111
 .gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev1_SB_DFFN_Q_D Q=vCHECK.prev1[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
@@ -2763,7 +2711,7 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000111110001000
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev3_SB_DFFN_Q_D Q=vCHECK.prev3[3]
+.gate SB_DFFN C=button_press.bstateReg D=led5_SB_LUT4_I0_I3 Q=vCHECK.prev3[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
 .gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev3_SB_DFFN_Q_1_D Q=vCHECK.prev3[2]
@@ -2784,10 +2732,6 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
 .gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev4[0] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev3[0] O=vCHECK.prev3_SB_DFFN_Q_3_D
-.attr module_not_derived 00000000000000000000000000000001
-.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
-.param LUT_INIT 1000111110001000
-.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev4[3] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev3[3] O=vCHECK.prev3_SB_DFFN_Q_D
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000111110001000
@@ -2819,16 +2763,52 @@
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
 .param LUT_INIT 1000111110001000
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led4_SB_LUT4_I1_O Q=vCHECK.prev5[3]
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_D Q=vCHECK.prev5[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led3_SB_LUT4_I1_O Q=vCHECK.prev5[2]
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_1_D Q=vCHECK.prev5[2]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led2_SB_LUT4_I1_O Q=vCHECK.prev5[1]
+.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev6[2] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[2] O=vCHECK.prev5_SB_DFFN_Q_1_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111110001000
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_2_D Q=vCHECK.prev5[1]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
-.gate SB_DFFN C=button_press.bstateReg D=vCHECK.led1_SB_LUT4_I1_O Q=vCHECK.prev5[0]
+.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev6[1] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[1] O=vCHECK.prev5_SB_DFFN_Q_2_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111110001000
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_3_D Q=vCHECK.prev5[0]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev6[0] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[0] O=vCHECK.prev5_SB_DFFN_Q_3_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111110001000
+.gate SB_LUT4 I0=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I1_O I1=vCHECK.prev6[3] I2=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O I3=vCHECK.prev5[3] O=vCHECK.prev5_SB_DFFN_Q_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:55.33-56.52"
+.param LUT_INIT 1000111110001000
+.gate SB_DFFN C=button_press.bstateReg D=led8_SB_LUT4_I3_I2 Q=vCHECK.prev6[3]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev6_SB_DFFN_Q_1_D Q=vCHECK.prev6[2]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.gate SB_LUT4 I0=$false I1=button_press.buttonReg[2] I2=vCHECK.prev6[2] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.prev6_SB_DFFN_Q_1_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100110011110000
+.gate SB_DFFN C=button_press.bstateReg D=vCHECK.prev6_SB_DFFN_Q_2_D Q=vCHECK.prev6[1]
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
+.gate SB_LUT4 I0=$false I1=button_press.buttonReg[1] I2=vCHECK.prev6[1] I3=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_O O=vCHECK.prev6_SB_DFFN_Q_2_D
+.attr module_not_derived 00000000000000000000000000000001
+.attr src "/usr/local/bin/../share/yosys/ice40/cells_map.v:51.34-52.52"
+.param LUT_INIT 1100110011110000
+.gate SB_DFFN C=button_press.bstateReg D=led5_SB_LUT4_I0_I1 Q=vCHECK.prev6[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:1.51-1.90"
 .gate SB_DFFNESR C=button_press.bstateReg D=button_press.buttonReg[3] E=vCHECK.prevNum_SB_DFFNESR_Q_E Q=vCHECK.prevNum[3] R=vCHECK.prevNum_SB_DFFNESR_Q_E_SB_LUT4_O_I1_SB_LUT4_I2_I1_SB_LUT4_I3_O
@@ -2888,7 +2868,7 @@
 .gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev2_SB_DFFN_Q_3_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC2[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev3_SB_DFFN_Q_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC3[3]
+.gate SB_DFFNE C=button_press.bstateReg D=led5_SB_LUT4_I0_I3 E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC3[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
 .gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev3_SB_DFFN_Q_1_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC3[2]
@@ -2912,33 +2892,33 @@
 .gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev4_SB_DFFN_Q_3_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC4[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led4_SB_LUT4_I1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[3]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led3_SB_LUT4_I1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[2]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_1_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[2]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led2_SB_LUT4_I1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[1]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_2_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[1]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led1_SB_LUT4_I1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[0]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev5_SB_DFFN_Q_3_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC5[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led4_SB_LUT4_I1_1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[3]
+.gate SB_DFFNE C=button_press.bstateReg D=led8_SB_LUT4_I3_I2 E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[3]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led3_SB_LUT4_I2_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[2]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev6_SB_DFFN_Q_1_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[2]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led2_SB_LUT4_I2_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[1]
+.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.prev6_SB_DFFN_Q_2_D E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[1]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.gate SB_DFFNE C=button_press.bstateReg D=vCHECK.led1_SB_LUT4_I1_1_O E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[0]
+.gate SB_DFFNE C=button_press.bstateReg D=led5_SB_LUT4_I0_I1 E=compareType_SB_LUT4_I2_O Q=vCHECK.prevUC6[0]
 .attr module_not_derived 00000000000000000000000000000001
 .attr src "top.v:107.18-127.6|validityChecker.v:53.2-125.5|/usr/local/bin/../share/yosys/ice40/cells_map.v:7.57-7.103"
-.names $true lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[0]
+.names $true lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[0]
 1 1
-.names lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 lCHECK.nextstate_SB_DFFN_Q_2_D_SB_LUT4_O_I2_SB_LUT4_O_I0_SB_LUT4_I0_O_SB_LUT4_I2_O_SB_LUT4_I2_O_SB_CARRY_I1_CO[1]
+.names lCHECK.count_SB_DFFN_Q_28_D_SB_LUT4_O_I3 lCHECK.count_SB_DFFN_Q_9_D_SB_LUT4_O_I3_SB_CARRY_I1_CO[1]
 1 1
 .names $true lCHECK.count_SB_DFFN_Q_29_D_SB_LUT4_O_I3_SB_CARRY_CI_CO[0]
 1 1
@@ -3222,14 +3202,6 @@
 1 1
 .names vCHECK.correct led4
 1 1
-.names controlFSM.testLED led5
-1 1
-.names controlFSM.testLED2 led6
-1 1
-.names controlFSM.testLED3 led7
-1 1
-.names controlFSM.testLED4 led8
-1 1
 .names blinks.clk_led ledblink
 1 1
 .names controlFSM.read_input readInput
@@ -3252,17 +3224,25 @@
 1 1
 .names compareType[1] vCHECK.compareType[1]
 1 1
+.names led5 vCHECK.correctUC[0]
+1 1
+.names led6 vCHECK.correctUC[1]
+1 1
+.names led7 vCHECK.correctUC[2]
+1 1
+.names led8 vCHECK.correctUC[3]
+1 1
 .names hwclk vCHECK.hwclk
 1 1
 .names $undef vCHECK.inputWrong
 1 1
-.names vCHECK.led1 vCHECK.prev6[0]
+.names led5 vCHECK.led1
 1 1
-.names vCHECK.led2 vCHECK.prev6[1]
+.names led6 vCHECK.led2
 1 1
-.names vCHECK.led3 vCHECK.prev6[2]
+.names led7 vCHECK.led3
 1 1
-.names vCHECK.led4 vCHECK.prev6[3]
+.names led8 vCHECK.led4
 1 1
 .names controlFSM.read_input vCHECK.readInput
 1 1
