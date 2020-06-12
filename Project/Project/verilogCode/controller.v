@@ -106,7 +106,8 @@ module controller (
         led3 <= 0;
         read_input <= 1;
         compareType <= 0;
-        start_blinking <= 0;							
+        start_blinking <= 0;
+        store = 0;					
         if (bstatechange & button[3:0]==4'd9) begin
           //testLED=0;
           //testLED2=1;
@@ -202,9 +203,11 @@ module controller (
         read_input = 0;
         compareType = MATCHUC;
         if (/*data_ready&*/correct_input) begin
+          blinkType = 1;
           nextstate = REPROGRAMSUCCESS;
         end
         else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
+          blinkType = 0;
           nextstate = LED3LONGBLINK;
         end
         /*
@@ -218,6 +221,7 @@ module controller (
         led3 <= 1;
         read_input = 1;
         compareType = COMPAREPC;
+        start_blinking = 0;
         if (bstatechange&(button[3:0]==8)/*&validLengthPC*/) begin
           nextstate = CHECKPC;
         end
@@ -234,6 +238,7 @@ module controller (
         led3 <= 1;
         read_input = 1;
         compareType = STOREUC;
+        start_blinking = 0;
         if (bstatechange&(button[3:0]==8)/*&validLength*/) begin
           nextstate = READUC2;
         end

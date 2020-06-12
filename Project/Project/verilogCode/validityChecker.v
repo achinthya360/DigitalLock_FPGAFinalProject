@@ -6,8 +6,8 @@ module validChecker (
   input wire inputWrong,
   input wire readInput,
   input wire [1:0]compareType,
-  input wire [23:0]correctUC,
-  input wire [23:0]correctPC,
+  //input wire [23:0]correctUC,
+  //input wire [23:0]correctPC,
   input wire store,
   output reg correct,
   output wire [23:0]newUC,
@@ -24,6 +24,26 @@ module validChecker (
 	assign led2 = prev6[1];
 	assign led3 = prev6[2];
 	assign led4 = prev6[3];
+
+	reg [23:0] correctUC;
+    initial correctUC = (correctUC1 << 20) + (correctUC2 << 16) + (correctUC3 << 12)
+    + (correctUC4 << 8) + (correctUC5 << 4) + (correctUC6);
+    parameter [3:0]correctUC1 = 1;
+    parameter [3:0]correctUC2 = 2;
+    parameter [3:0]correctUC3 = 3;
+    parameter [3:0]correctUC4 = 4;
+    parameter [3:0]correctUC5 = 5;
+    parameter [3:0]correctUC6 = 6;
+
+
+    parameter [23:0] correctPC = (correctPC1 << 20) + (correctPC2 << 16) + (correctPC3 << 12)
+    + (correctPC4 << 8) + (correctPC5 << 4) + (correctPC6);
+    parameter [3:0]correctPC1 = 6;
+    parameter [3:0]correctPC2 = 6;
+    parameter [3:0]correctPC3 = 6;
+    parameter [3:0]correctPC4 = 6;
+    parameter [3:0]correctPC5 = 6;
+    parameter [3:0]correctPC6= 6;
 
 	parameter COMPAREPC = 2'b00;
 	parameter COMPAREUC = 2'b01;
@@ -100,17 +120,24 @@ module validChecker (
 			prevUC5 = prev5;
 			prevUC6 = prev6;
 			dataready <= 0;
-			correct <= 0;
+			correct <= 1;
 		end
 	end
 
 	always @(negedge store) begin
-		newUC[23:20] = prev1;
-		newUC[19:16] = prev2;
-		newUC[15:12] = prev3;
-		newUC[11:8] = prev4;
-		newUC[7:4] = prev5;
-		newUC[3:0] = prev6;
+		// newUC[23:20] = prev1;
+		// newUC[19:16] = prev2;
+		// newUC[15:12] = prev3;
+		// newUC[11:8] = prev4;
+		// newUC[7:4] = prev5;
+		// newUC[3:0] = prev6;
+
+		correctUC[23:20] = prevUC1;
+		correctUC[19:16] = prevUC2;
+		correctUC[15:12] = prevUC3;
+		correctUC[11:8] = prevUC4;
+		correctUC[7:4] = prevUC5;
+		correctUC[3:0] = prevUC6;
 	end
 
 
