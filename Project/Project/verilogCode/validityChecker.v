@@ -58,7 +58,7 @@ module validChecker (
 				prev3 = 0;
 				prev4 = 0;
 				prev5 = 0;
-				prev6 = 0;
+				prev6 = button;
 				prevNum = 0;
 				correct <= 0;
 				dataready <= 0;
@@ -91,8 +91,8 @@ module validChecker (
 			end
 		end
 		else if(compareType==COMPAREUC) begin // compare UC to correct UC
-			if((prev1[3:0]==correctUC[23:20] | correctUC[23:20]==0)
-				&& (prev2[3:0]==correctUC[19:16] | correctUC[19:16]==0)
+			if((prev1[3:0]==correctUC[23:20] /*| correctUC[23:20]==0*/)
+				&& (prev2[3:0]==correctUC[19:16] /*| correctUC[19:16]==0*/)
 				&& prev3[3:0]==correctUC[15:12]
 				&& prev4[3:0]==correctUC[11:8]
 				&& prev5[3:0]==correctUC[7:4]
@@ -102,8 +102,8 @@ module validChecker (
 			end
 		end
 		else if(compareType==MATCHUC) begin// compare UC to previously entered input UC
-			if((prev1[3:0]==prevUC1[3:0] | prevUC1[23:20]==0)
-				&& (prev2[3:0]==prevUC2[3:0] | prevUC1[19:16]==0)
+			if((prev1[3:0]==prevUC1[3:0] /*| prevUC1[23:20]==0*/)
+				&& (prev2[3:0]==prevUC2[3:0] /*| prevUC1[19:16]==0*/)
 				&& prev3[3:0]==prevUC3[3:0]
 				&& prev4[3:0]==prevUC4[3:0]
 				&& prev5[3:0]==prevUC5[3:0]

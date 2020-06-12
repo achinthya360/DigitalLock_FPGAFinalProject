@@ -202,6 +202,7 @@ module controller (
         led3 <= 1;
         read_input = 0;
         compareType = MATCHUC;
+        start_blinking = 0;
         if (/*data_ready&*/correct_input) begin
           blinkType = 1;
           nextstate = REPROGRAMSUCCESS;
