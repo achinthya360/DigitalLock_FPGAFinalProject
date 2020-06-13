@@ -92,7 +92,7 @@ module controller (
     end  
     
     start_blinking <= 0;
-    blinkType <= 0;
+    //blinkType <= 0;
 
     case (state)
       IDLE            : begin
