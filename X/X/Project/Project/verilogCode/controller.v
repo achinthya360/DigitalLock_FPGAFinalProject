@@ -120,15 +120,16 @@ module controller (
         led2 <= 0;
         led3 <= ledblink;
         read_input <= 0;
-        start_blinking <= 1;
+        
         compareType <= 0;
         if (done_blinking) begin
           nextstate = IDLE;
-          start_blinking <= 0;
+          //start_blinking <= 0;
         end
         else if (!done_blinking) begin
-          nextstate = LED3LONGBLINK;
           start_blinking <= 1;
+          nextstate = LED3LONGBLINK;
+          //start_blinking <= 1;
         end
       end
       CHECKPC         : begin
@@ -141,6 +142,7 @@ module controller (
           nextstate = READUC;
         end
         else if (!correct_input|((button[3:0]==7)&bstatechange)) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
       end
@@ -151,6 +153,7 @@ module controller (
         read_input <= 0;
         compareType = COMPAREUC;
         if (button[3:0]==7) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else if (correct_input) begin
@@ -175,9 +178,11 @@ module controller (
           nextstate = INPUT_CHECK;
         end
         else if(bstatechange&(button[3:0]==9)&!validLength) begin
+          blinkType <= 0;
           nextstate = WRONGUCBLINK;
         end
         else if (bstatechange&button[3:0]==7) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -192,11 +197,11 @@ module controller (
         compareType <= MATCHUC;
         start_blinking <= 0;
         if (/*data_ready&*/correct_input) begin
-          //blinkType <= 1;
+          blinkType <= 1;
           nextstate = REPROGRAMSUCCESS;
         end
         else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
-          //blinkType <= 0;
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         /*
@@ -215,6 +220,7 @@ module controller (
           nextstate = CHECKPC;
         end
         else if (bstatechange&(button[3:0]==8)&!validLengthPC|((button[3:0]==7)&bstatechange)) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -232,6 +238,7 @@ module controller (
           nextstate = READUC2;
         end
         else if (bstatechange&(button[3:0]==8)&!validLength|((button[3:0]==7)&bstatechange)) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -248,6 +255,7 @@ module controller (
           nextstate = MATCHUCS;
         end
         else if (bstatechange&(button[3:0]==8)&!validLength|((button[3:0]==7)&bstatechange)) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -259,14 +267,14 @@ module controller (
         led2 <= 0;
         led3 <= ledblink;
         read_input <= 0;
-        start_blinking <= 1;
         blinkType <= 1;
+        //start_blinking <= 1;
         //store <= 1;
         compareType <= 0;
         if (done_blinking) begin
           //store <= 0;
           //blinkType <= 0;
-          start_blinking <= 0;
+          //start_blinking <= 0;
           nextstate = IDLE;
         end
         else if (!done_blinking) begin
@@ -284,6 +292,7 @@ module controller (
         compareType <= 0;
         start_blinking <= 0;
         if (bstatechange&button[3:0]==7) begin
+          blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         else begin
@@ -295,16 +304,17 @@ module controller (
         led2 <= ledblink;
         led3 <= 0;
         read_input <= 0;
-        start_blinking <= 1;
         blinkType <= 0;
+        
         compareType <= 0;
         if (done_blinking) begin
           nextstate = IDLE;
-          start_blinking <= 0;
+          //start_blinking <= 0;
         end
         else if (!done_blinking) begin
-          nextstate = WRONGUCBLINK;
           start_blinking <= 1;
+          nextstate = WRONGUCBLINK;
+          //start_blinking <= 1;
         end
       end
     endcase

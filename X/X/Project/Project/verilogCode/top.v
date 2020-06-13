@@ -119,10 +119,10 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .dataready(data_ready),
         
         
-        .led1(led5),
-        .led2(led6),
-        .led3(led7),
-        .led4(led8),   
+        // .led1(led5),
+        // .led2(led6),
+        // .led3(led7),
+        // .led4(led8),   
         
     ); 
 

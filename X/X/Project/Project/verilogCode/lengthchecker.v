@@ -80,6 +80,9 @@ module lengthChecker (
           count <= 0;
           nextstate = REPROGRAM3;
         end
+        else if(readInput&&button[3:0]==4'd9) begin
+          count <=0;
+        end
         else begin
           count <= count + 1;
           nextstate = REPROGRAM2;
@@ -88,6 +91,9 @@ module lengthChecker (
       REPROGRAM3    : begin
         if (readInput&&(button[3:0]==4'd8)) begin
           nextstate = START;
+        end
+        else if(readInput&&button[3:0]==4'd9) begin
+          count <=0;
         end
         else begin
           count <= count + 1;

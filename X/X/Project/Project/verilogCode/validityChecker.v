@@ -28,11 +28,11 @@ module validChecker (
 	reg [23:0] correctUC;
     initial correctUC = (correctUC1 << 20) + (correctUC2 << 16) + (correctUC3 << 12)
     + (correctUC4 << 8) + (correctUC5 << 4) + (correctUC6);
-    parameter [3:0]correctUC1 = 1;
-    parameter [3:0]correctUC2 = 2;
-    parameter [3:0]correctUC3 = 3;
-    parameter [3:0]correctUC4 = 4;
-    parameter [3:0]correctUC5 = 5;
+    parameter [3:0]correctUC1 = 6;
+    parameter [3:0]correctUC2 = 6;
+    parameter [3:0]correctUC3 = 6;
+    parameter [3:0]correctUC4 = 6;
+    parameter [3:0]correctUC5 = 6;
     parameter [3:0]correctUC6 = 6;
 
     parameter [23:0] correctPC = (correctPC1 << 20) + (correctPC2 << 16) + (correctPC3 << 12)
