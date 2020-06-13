@@ -192,11 +192,11 @@ module controller (
         compareType <= MATCHUC;
         start_blinking <= 0;
         if (/*data_ready&*/correct_input) begin
-          blinkType <= 1;
+          //blinkType <= 1;
           nextstate = REPROGRAMSUCCESS;
         end
         else if (/*data_ready&*/!correct_input|((button[3:0]==7)&bstatechange)) begin
-          blinkType <= 0;
+          //blinkType <= 0;
           nextstate = LED3LONGBLINK;
         end
         /*
