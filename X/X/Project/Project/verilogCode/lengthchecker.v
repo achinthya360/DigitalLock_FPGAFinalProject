@@ -45,11 +45,11 @@ module lengthChecker (
     case (state)
       START         : begin
         if (readInput&&(button[3:0]==4'd8)) begin
-          count = 0;
+          count <= 0;
           nextstate = READ_REPROGRAM;
         end
         else if (readInput&&(button[3:0]==4'd9)) begin
-          count = 0;
+          count <= 0;
           nextstate = READ_LOCK;
         end
         else begin
@@ -62,26 +62,26 @@ module lengthChecker (
         end
         else begin
           nextstate = READ_LOCK;
-          count = count + 1;
+          count <= count + 1;
         end
       end
       READ_REPROGRAM: begin
         if (readInput&&(button[3:0]==4'd8)) begin
-          count = 0;
+          count <= 0;
           nextstate = REPROGRAM2;
         end
         else begin
-          count = count + 1;
+          count <= count + 1;
           nextstate = READ_REPROGRAM;
         end
       end
       REPROGRAM2    : begin
         if (readInput&&(button[3:0]==4'd8)) begin
-          count = 0;
+          count <= 0;
           nextstate = REPROGRAM3;
         end
         else begin
-          count = count + 1;
+          count <= count + 1;
           nextstate = REPROGRAM2;
         end
       end
@@ -90,7 +90,7 @@ module lengthChecker (
           nextstate = START;
         end
         else begin
-          count = count + 1;
+          count <= count + 1;
           nextstate = REPROGRAM3;
         end
       end

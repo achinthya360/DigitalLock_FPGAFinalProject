@@ -35,15 +35,14 @@ module validChecker (
     parameter [3:0]correctUC5 = 5;
     parameter [3:0]correctUC6 = 6;
 
-
     parameter [23:0] correctPC = (correctPC1 << 20) + (correctPC2 << 16) + (correctPC3 << 12)
     + (correctPC4 << 8) + (correctPC5 << 4) + (correctPC6);
-    parameter [3:0]correctPC1 = 6;
-    parameter [3:0]correctPC2 = 6;
-    parameter [3:0]correctPC3 = 6;
+    parameter [3:0]correctPC1 = 4;
+    parameter [3:0]correctPC2 = 5;
+    parameter [3:0]correctPC3 = 5;
     parameter [3:0]correctPC4 = 6;
-    parameter [3:0]correctPC5 = 6;
-    parameter [3:0]correctPC6= 6;
+    parameter [3:0]correctPC5 = 1;
+    parameter [3:0]correctPC6 = 2;
 
 	parameter COMPAREPC = 2'b00;
 	parameter COMPAREUC = 2'b01;
@@ -52,7 +51,11 @@ module validChecker (
 
 	always @(negedge bstate) begin
 		if(readInput) begin // only update registers when inputs should be read
-			if((prevNum==8||prevNum==9)||(button[3:0]==7)) begin
+			if(((button[3:0]==8)||(button[3:0]==9)) /*&& correct == 1*/) begin // ignore 8 or 9
+				prevNum = button;
+				dataready <= 1;
+			end
+			else if((prevNum==8||prevNum==9)||(button[3:0]==7)) begin
 				prev1 = 0;
 				prev2 = 0;
 				prev3 = 0;
@@ -63,10 +66,6 @@ module validChecker (
 				correct <= 0;
 				dataready <= 0;
 			end 
-			if(((button[3:0]==8)||(button[3:0]==9)) && correct == 1) begin // ignore 8 or 9
-				prevNum = button;
-				dataready <= 1;
-			end
 			else begin
 				prev1 = prev2;
 				prev2 = prev3;
@@ -120,7 +119,10 @@ module validChecker (
 			prevUC5 = prev5;
 			prevUC6 = prev6;
 			dataready <= 0;
-			correct <= 1;
+			if(prev3==0) 
+				correct <= 0;
+			else
+				correct <= 1;
 		end
 	end
 

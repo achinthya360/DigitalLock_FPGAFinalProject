@@ -64,15 +64,15 @@ module blinker (
     assign led7 = numBlinks[2];
     assign led8 = numBlinks[3];
     */
-    reg [2:0]doneCounter;
-    initial doneCounter = 3'd7;
+    //reg [2:0]doneCounter;
+    //initial doneCounter = 3'd7;
 
     always @ (posedge hwclk) begin 
         if(start_blinking & !prev_blinking) begin
             numBlinks = 4'b0000;
-            done = 0;
+            done <= 0;
             clk_led <= 1;
-            doneCounter = 0;
+            //doneCounter = 0;
         end
         prev_blinking <= start_blinking;
     
@@ -83,7 +83,7 @@ module blinker (
                 end 
                 else begin
                     blink_timer = 32'b0;
-                    numBlinks <= numBlinks + 1;
+                    numBlinks = numBlinks + 1;
                     clk_led <= 0;
                 end
             end 
@@ -93,12 +93,13 @@ module blinker (
                 end 
                 else begin
                     blink_timer = 32'b0;
-                    numBlinks <= numBlinks + 1;
+                    numBlinks = numBlinks + 1;
                     clk_led <= 1;
                 end
             end
         end 
         else begin    // module is done blinking
+            clk_led <= 0;
             if(start_blinking) begin
                 done <= 1;
             end
