@@ -8,6 +8,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     keypad_c1,
     keypad_c2,
     keypad_c3,
+    sevseg
     );
 
     /* I/O */
@@ -20,6 +21,8 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     output led6;
     output led7;
     output led8;
+    
+    output sevseg;
 
     output keypad_r1;
     output keypad_r2;
@@ -32,6 +35,8 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     wire [3:0] button;
     wire [3:0] button_local;
     wire bstate;
+
+    wire led;
 
     // reg [23:0] correctUC;
     // initial correctUC = (correctUC1 << 20) + (correctUC2 << 16) + (correctUC3 << 12)
@@ -136,7 +141,7 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
         .blinkType(blinkType),
         //.check1(check1),        // are these check1 and 2 vestiges of logic before compareType was introduced???
         //.check2(check2),
-        .led1(led1),
+        .led1(led),
         .led2(led2),
         .led3(led3),
         .read_input(readInput),
@@ -171,7 +176,8 @@ module top (hwclk, led1, led2, led3, led4, led5, led6, led7, led8,
     always @(posedge hwclk) begin
         blinkType <= blinkTypecontrol;
     end */
-
+    assign sevseg = led;
+    assign led1 = led;
     
     //wire testLED; 
     //assign testLED = validUClength;
